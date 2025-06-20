@@ -1,32 +1,24 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find all .text-image-item direct children
-  const items = Array.from(element.querySelectorAll(':scope > .text-image-item'));
-
-  // Build columns: each is a cell (content + image)
-  const columns = items.map(item => {
-    // Get image (may be at start or end, doesn't matter for 2-col layout)
-    const img = item.querySelector('img');
-    // Get content container (may contain title + description, typically only description)
-    const content = item.querySelector('.text-image-item__content');
-    // The title may be empty, so only include if it contains text
-    const title = content?.querySelector('.text-image-item__title');
-    const desc = content?.querySelector('.text-image-item__description');
-    const cellContent = [];
-    if (desc) cellContent.push(desc);
-    if (img) cellContent.push(img);
-    return cellContent;
+  // Find the nav block that contains the tabs
+  const navContainer = element.querySelector('.page-tab-navigation');
+  if (!navContainer) return;
+  const nav = navContainer.querySelector('nav');
+  if (!nav) return;
+  // Each tab is a <li> containing an <a>
+  const ul = nav.querySelector('ul');
+  if (!ul) return;
+  const lis = Array.from(ul.children).filter(li => li.tagName === 'LI');
+  // Each column is the <a> element inside the <li> (reference the actual element)
+  const columns = lis.map(li => {
+    const a = li.querySelector('a');
+    return a || '';
   });
-
-  // Only create the columns row if there's at least one column
-  // Header row as in spec
-  const headerRow = ['Columns (columns21)'];
-  // Table array: header, then columns
+  // Block table: header row is one cell, then one row with each column as a cell
   const cells = [
-    headerRow,
+    ['Columns (columns21)'],
     columns
   ];
-
   const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

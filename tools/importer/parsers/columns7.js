@@ -1,44 +1,35 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the columns block wrapper (tree-column-teaser-block)
-  const block = element.querySelector('.tree-column-teaser-block');
-  if (!block) return;
+  // Find the grid containing all downloads
+  const grid = element.querySelector('.cmp-grid-container__items > .aem-Grid');
+  if (!grid) return;
 
-  // Get the immediate children which represent columns
-  const columns = Array.from(block.querySelectorAll(':scope > .simple-teaser-item'));
+  // Get all .download cards (these are grid columns)
+  const downloadColumns = Array.from(grid.children);
 
-  // Defensive: if no columns, do nothing
-  if (columns.length === 0) return;
-
-  // Map each column to content for the table cell
-  const cells = columns.map((col) => {
-    // For the text/paragraph column (has .tree-column-teaser-block__text)
-    if (col.classList.contains('tree-column-teaser-block__text')) {
-      // Use the entire element so all p's are included
-      return col;
-    }
-    // For column with image and button
-    const content = [];
-    // Only reference existing elements
-    const img = col.querySelector('img');
-    if (img) content.push(img);
-    // Find download link (a)
-    const a = col.querySelector('a');
-    if (a) content.push(a);
-    // If no img or a, fallback to all children
-    if (content.length === 0) {
-      content.push(...col.childNodes);
-    }
-    return content;
+  // For each download, grab the download card block, preserving structure
+  const blocks = downloadColumns.map(col => {
+    // Reference the cmp-download block directly (contains all content and text)
+    const block = col.querySelector('.cmp-download');
+    return block || col;
   });
 
-  // Header row must match exactly
-  const headerRow = ['Columns (columns7)'];
-  // Combine into table data
-  const tableData = [headerRow, cells];
+  // Arrange as rows of 3 columns to match the screenshot
+  const rows = [];
+  for (let i = 0; i < blocks.length; i += 3) {
+    rows.push([
+      blocks[i] || '',
+      blocks[i + 1] || '',
+      blocks[i + 2] || ''
+    ]);
+  }
 
-  // Create block table
-  const table = WebImporter.DOMUtils.createTable(tableData, document);
-  // Replace the original element with the new table
+  // Header row must match exactly: one column, with the block name
+  const cells = [
+    ['Columns (columns7)'],
+    ...rows
+  ];
+
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

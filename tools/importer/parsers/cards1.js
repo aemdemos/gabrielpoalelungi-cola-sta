@@ -1,61 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the teaser items
-  const itemsWrapper = element.querySelector('.teaser-block__items');
-  const itemElems = itemsWrapper ? itemsWrapper.querySelectorAll(':scope > .teaser-item') : [];
-  
-  // Table header
-  const rows = [['Cards (cards1)']];
+  // Cards (cards1) block: 2 columns, header row, each card is a row
+  const headerRow = ['Cards (cards1)'];
+  const rows = [headerRow];
 
-  // For each card, extract image and text content
-  itemElems.forEach(card => {
-    // First cell: Image (reference existing <img>)
-    const img = card.querySelector('img');
+  // The teaser cards are .cmp-teaser (NOT .teaser)
+  // But some wrappers may have both classes
+  // We'll get all .cmp-teaser as direct/descendant of the root .aem-Grid
+  const teaserCards = Array.from(
+    element.querySelectorAll('.cmp-teaser')
+  );
 
-    // Second cell: Text content (subtitle, title, desc, CTA)
-    const content = card.querySelector('.teaser-item__content');
-    const titleWrapper = content && content.querySelector('.teaser-item__title-wrapper');
-    const subtitle = titleWrapper && titleWrapper.querySelector('.teaser-item__subtitle');
-    const title = titleWrapper && titleWrapper.querySelector('.teaser-item__title');
-    const descDiv = content && content.querySelector('.teaser-item__desc');
-    const cta = content && content.querySelector('a.button, a.cta-link, a.cta-download-link');
-
-    const cellContent = [];
-
-    if (subtitle && subtitle.textContent.trim()) {
-      // Subtitle (styled bold as in the screenshot)
-      const subtitleStrong = document.createElement('strong');
-      subtitleStrong.textContent = subtitle.textContent.trim();
-      cellContent.push(subtitleStrong, document.createElement('br'));
-    }
-    if (title && title.textContent.trim()) {
-      // Title
-      const titleDiv = document.createElement('div');
-      titleDiv.style.fontWeight = 'bold';
-      titleDiv.textContent = title.textContent.trim();
-      cellContent.push(titleDiv);
-    }
-    if (descDiv) {
-      // Description (may contain <p> or just text)
-      Array.from(descDiv.childNodes).forEach(node => {
-        // Avoid using Node constants for compatibility
-        if (node.nodeType === 1) { // ELEMENT_NODE
-          cellContent.push(node);
-        } else if (node.nodeType === 3 && node.textContent.trim()) { // TEXT_NODE
-          const p = document.createElement('p');
-          p.textContent = node.textContent.trim();
-          cellContent.push(p);
-        }
-      });
-    }
-    if (cta) {
-      cellContent.push(cta);
+  teaserCards.forEach((teaser) => {
+    // Image cell: find the first <img> inside .cmp-teaser__image
+    let imgCell = '';
+    const imgWrapper = teaser.querySelector('.cmp-teaser__image');
+    if (imgWrapper) {
+      const img = imgWrapper.querySelector('img');
+      if (img) {
+        imgCell = img;
+      }
     }
 
-    rows.push([
-      img,
-      cellContent
-    ]);
+    // Text cell: prefer just the heading (with link if present)
+    // The heading could be h4, h5, etc.
+    let textCell;
+    const content = teaser.querySelector('.cmp-teaser__content');
+    if (content) {
+      const heading = content.querySelector('h1, h2, h3, h4, h5, h6');
+      // Only put the heading itself (with link if present)
+      if (heading) {
+        textCell = heading;
+      } else {
+        // Fallback: use full content div if heading absent
+        textCell = content;
+      }
+    } else {
+      textCell = '';
+    }
+    rows.push([imgCell, textCell]);
   });
 
   const table = WebImporter.DOMUtils.createTable(rows, document);

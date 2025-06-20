@@ -1,46 +1,30 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Prepare the header
-  const headerRow = ['Columns (columns6)'];
+  // Find gridContainer that holds the columns
+  const gridContainer = element.querySelector('.cmp-grid-container__items > .aem-Grid');
+  let col1 = null;
+  let col2 = null;
 
-  // Get the relevant wrapper containing the columns
-  const root = element.querySelector('.hero-banner-image-descr');
-  if (!root) return;
-
-  // Find left (text) and right (image) columns
-  const content = root.querySelector('.hero-banner-image-descr__content');
-  const imageWrapper = root.querySelector('.hero-banner-image-descr__image-wrapper');
-
-  // Defensive fallback for missing children
-  let leftCell = content;
-  if (leftCell && leftCell.querySelector('.hero-banner-image-descr__text')) {
-    leftCell = leftCell.querySelector('.hero-banner-image-descr__text');
-  }
-  // If leftCell is still null or missing, fallback to root's first div
-  if (!leftCell) {
-    const fallback = root.querySelector('div');
-    if (fallback) leftCell = fallback;
+  if (gridContainer) {
+    const children = Array.from(gridContainer.children);
+    // Expecting two children, one with class 'image', one with class 'content-block'
+    col1 = children.find((el) => el.classList.contains('image'));
+    col2 = children.find((el) => el.classList.contains('content-block'));
   }
 
-  let rightCell = null;
-  if (imageWrapper && imageWrapper.querySelector('img')) {
-    rightCell = imageWrapper.querySelector('img');
-  } else if (imageWrapper) {
-    rightCell = imageWrapper;
-  } else {
-    // Fallback to any img in the root
-    const fallbackImg = root.querySelector('img');
-    if (fallbackImg) rightCell = fallbackImg;
+  // Fallback for unexpected HTML structure
+  if (!col1 || !col2) {
+    const allDivs = Array.from(element.querySelectorAll('.cmp-grid-container__items > .aem-Grid > div'));
+    col1 = col1 || allDivs[0] || document.createElement('div');
+    col2 = col2 || allDivs[1] || document.createElement('div');
   }
 
-  // Compose the data row
-  const dataRow = [leftCell, rightCell];
-
-  // Build the table
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    dataRow
-  ], document);
-
-  element.replaceWith(table);
+  // Compose the table with exactly one header cell in the header row
+  const cells = [
+    ['Columns (columns6)'], // one header cell spanning columns
+    [col1, col2]            // one row with two columns
+  ];
+  
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }
