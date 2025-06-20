@@ -1,114 +1,156 @@
 {
-  "originUrl": "https://www.myelomaandme.co.uk",
-  "lastCrawled": "https://www.myelomaandme.co.uk/",
+  "originUrl": "https://ramispa.ro",
+  "lastCrawled": "https://ramispa.ro/",
   "urls": [
     {
-      "url": "https://www.myelomaandme.co.uk/",
+      "url": "https://ramispa.ro/",
       "source": "CRAWL",
       "targetPath": "/",
-      "id": "6320aff2a137321ed1d827fd7d642802517bba4d"
+      "id": "2f4e260b4d2e4f6eb8992f4da0d578867f4c5ac5"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/appointment-support",
+      "url": "https://ramispa.ro/contact/",
       "source": "CRAWL",
-      "targetPath": "/appointment-support",
-      "id": "6d882a223dfc522608bbfa25cd2420bd95abad40"
+      "targetPath": "/contact",
+      "id": "2fabf6f326d95b6e18f33dad9a751bf75ac2261e"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/care-partner",
+      "url": "https://ramispa.ro/despre-noi/",
       "source": "CRAWL",
-      "targetPath": "/care-partner",
-      "id": "8f33aafcb8413900159a697d410e08fd1c9431c6"
+      "targetPath": "/despre-noi",
+      "id": "13d10bb1f0019bb94e07df5acfb07b2b70094ffc"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/communicating-effectively",
+      "url": "https://ramispa.ro/en/",
       "source": "CRAWL",
-      "targetPath": "/communicating-effectively",
-      "id": "18f216fb37fe181476c3a20366cab5eb14b1a05f"
+      "targetPath": "/en",
+      "id": "b09bb734083d59b0f086605fd572752b5ea4ee51"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/connecting-with-others",
+      "url": "https://ramispa.ro/en/about-us/",
       "source": "CRAWL",
-      "targetPath": "/connecting-with-others",
-      "id": "2ae97135d86886b16cc4c38485465f9fa34c58a9"
+      "targetPath": "/en/about-us",
+      "id": "1c7857d05378d516853996ae2bf7983acac36499"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/diet",
+      "url": "https://ramispa.ro/en/bowen-therapy/",
       "source": "CRAWL",
-      "targetPath": "/diet",
-      "id": "35088c0b88edafa092d27aef4f94bffe1cf57a30"
+      "targetPath": "/en/bowen-therapy",
+      "id": "02ff0ea9e5eb8ba583a1a6f852baaba30015588b"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/find-what-matters-to-you",
+      "url": "https://ramispa.ro/en/contact-us/",
       "source": "CRAWL",
-      "targetPath": "/find-what-matters-to-you",
-      "id": "8ab207df28d9be9f2e6cba1181a8c0e0d544dd09"
+      "targetPath": "/en/contact-us",
+      "id": "4012c819ab9a06287a73bc2d6a0f52b47aa250d3"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/find-what-matters-to-you?mm-tool-id=4",
+      "url": "https://ramispa.ro/en/cookies-policy/",
       "source": "CRAWL",
-      "targetPath": "/find-what-matters-to-you",
-      "id": "1738f0f8804ae1bb27309429efc721b61b74f138"
+      "targetPath": "/en/cookies-policy",
+      "id": "ed3aab11d48ea8dbb69b5a24a69ed0b9b0f280b7"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/managing-conversations",
+      "url": "https://ramispa.ro/en/couples-massage/",
       "source": "CRAWL",
-      "targetPath": "/managing-conversations",
-      "id": "01b4cb512ef239b2447fb1f98f0898fd4325266a"
+      "targetPath": "/en/couples-massage",
+      "id": "40d42129c0c98908b53ab3132ab04a7ed3f234eb"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/mental-health",
+      "url": "https://ramispa.ro/en/gift-card-rami-spa/",
       "source": "CRAWL",
-      "targetPath": "/mental-health",
-      "id": "868a22bbc73ce1927c91c476165ffbad540c626f"
+      "targetPath": "/en/gift-card-rami-spa",
+      "id": "aafb8ec0eb7ec623f9ddae4a47cc5a671080604a"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/physical-health",
+      "url": "https://ramispa.ro/en/massage/",
       "source": "CRAWL",
-      "targetPath": "/physical-health",
-      "id": "1f21abfd783cd2cfd0b5546afadece89b71535c0"
+      "targetPath": "/en/massage",
+      "id": "cefe5855aa083faa1116a5602a6004dac775e094"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/preparing-for-your-appointments",
+      "url": "https://ramispa.ro/en/massage//",
       "source": "CRAWL",
-      "targetPath": "/preparing-for-your-appointments",
-      "id": "9644f82aae1f6f07d4bb61799f039b4b1a8b7f80"
+      "targetPath": "/en/massage",
+      "id": "ac6024b16ef4fc78fc82a08efe56112900e2ccb9"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/speaking-with-your-care-partner",
+      "url": "https://ramispa.ro/en/photo-gallery/",
       "source": "CRAWL",
-      "targetPath": "/speaking-with-your-care-partner",
-      "id": "82e3f01a5a8ecc4cb0e760ec8cdf829a32e53e81"
+      "targetPath": "/en/photo-gallery",
+      "id": "ff6294045c093b3b8516a1f05b302d75c55ed46a"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/speaking-your-healthcare-team",
+      "url": "https://ramispa.ro/en/privacy-policy/",
       "source": "CRAWL",
-      "targetPath": "/speaking-your-healthcare-team",
-      "id": "2d17ef568f4c17b47dc4b5ff38116b29bf0a35b9"
+      "targetPath": "/en/privacy-policy",
+      "id": "fd3ffc4b64bd2ce83ab917acbe16f374de3df201"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/website-terms-use",
+      "url": "https://ramispa.ro/en/return-cancellation-policy/",
       "source": "CRAWL",
-      "targetPath": "/website-terms-use",
-      "id": "229594456c7d5eb69af9ef46e7e0708a40124d30"
+      "targetPath": "/en/return-cancellation-policy",
+      "id": "49bdbd9f1743ce9a459415ad1ef00c719459c3fd"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/wellbeing",
+      "url": "https://ramispa.ro/en/terms-and-conditions/",
       "source": "CRAWL",
-      "targetPath": "/wellbeing",
-      "id": "10f482607a012916d022fcf0ea5a4e66692d6358"
+      "targetPath": "/en/terms-and-conditions",
+      "id": "bf0e9c95083e5debf19114f2141a5b3bf2625f36"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/Wellbeing",
+      "url": "https://ramispa.ro/galerie-foto/",
       "source": "CRAWL",
-      "targetPath": "/wellbeing",
-      "id": "c47561d35fcad93a1ffd4f80af158ab7627aa863"
+      "targetPath": "/galerie-foto",
+      "id": "d9e6d6b8f833a7826470c489353b7efc48628235"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/working-through-potential-disagreements",
+      "url": "https://ramispa.ro/gift-card/",
       "source": "CRAWL",
-      "targetPath": "/working-through-potential-disagreements",
-      "id": "35748fe91cbd9771dd3748c5e1e0beb63074d195"
+      "targetPath": "/gift-card",
+      "id": "af678b49985f034140c25cf69739cd6ad7741d82"
+    },
+    {
+      "url": "https://ramispa.ro/masaj-cupluri/",
+      "source": "CRAWL",
+      "targetPath": "/masaj-cupluri",
+      "id": "c4c664dae153b453c3216828aac44213151808b4"
+    },
+    {
+      "url": "https://ramispa.ro/masaj/",
+      "source": "CRAWL",
+      "targetPath": "/masaj",
+      "id": "f3dbdced2b4cfcde5caedf70642b80fbbd2ab156"
+    },
+    {
+      "url": "https://ramispa.ro/politica-cookies/",
+      "source": "CRAWL",
+      "targetPath": "/politica-cookies",
+      "id": "01bd8c2a2d71ef9456934ec3e3601e07894fa935"
+    },
+    {
+      "url": "https://ramispa.ro/politica-de-confidentialitate/",
+      "source": "CRAWL",
+      "targetPath": "/politica-de-confidentialitate",
+      "id": "ab0398ca854cd380966a325dc8b67545444e66ff"
+    },
+    {
+      "url": "https://ramispa.ro/politica-de-retur-anulare/",
+      "source": "CRAWL",
+      "targetPath": "/politica-de-retur-anulare",
+      "id": "a0e21ad7ca93b75d80ecc5ef0cb42d58ad8d0a51"
+    },
+    {
+      "url": "https://ramispa.ro/terapia-bowen/",
+      "source": "CRAWL",
+      "targetPath": "/terapia-bowen",
+      "id": "5baa75b4d80ade8b6efd270fdcf3e3fe48fb18d6"
+    },
+    {
+      "url": "https://ramispa.ro/termeni-si-conditii/",
+      "source": "CRAWL",
+      "targetPath": "/termeni-si-conditii",
+      "id": "9bce5fdf7dd478173d5738c3498e9ab57a34bf50"
     }
   ],
   "crawlOptions": {
@@ -126,8 +168,412 @@
   },
   "extractionErrors": [
     {
-      "url": "https://www.myelomaandme.co.uk/pre-appointment-checklist",
+      "url": "https://ramispa.ro/?p=141",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/contact/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=137",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/despre-noi/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=1422",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/about-us/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=3190",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/bowen-therapy/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=1462",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/contact-us/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=1995",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/cookies-policy/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=1953",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/couples-massage/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=2843",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/gift-card-rami-spa/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=1905",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/massage/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=1454",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/photo-gallery/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=1997",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/privacy-policy/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=2800",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/return-cancellation-policy/"
+    },
+    {
+      "url": "https://ramispa.ro/en/?p=1990",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/terms-and-conditions/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=1075",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/galerie-foto/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=2341",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/gift-card/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=1675",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/masaj-cupluri/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=1673",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/masaj/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=9",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/politica-cookies/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=3",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/politica-de-confidentialitate/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=2793",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/politica-de-retur-anulare/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=3121",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/terapia-bowen/"
+    },
+    {
+      "url": "https://ramispa.ro/?p=11",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/termeni-si-conditii/"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/108",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1405",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/137",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/1673",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/1675",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/3121",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/product/2341",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/1075",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/141",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/11",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/3",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/2793",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/9",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1422",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1905",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1953",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/3190",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/product/2843",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1454",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1462",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1990",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1997",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/2800",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1995",
+      "status": "401 Unauthorized"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fgift-card%2F",
       "status": "404 Not Found"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fgift-card%2F&",
+      "status": "404 Not Found"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fgift-card-rami-spa%2F",
+      "status": "404 Not Found"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fgift-card-rami-spa%2F&",
+      "status": "404 Not Found"
+    },
+    {
+      "url": "https://ramispa.ro/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/comments/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/comments/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fdespre-noi%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fdespre-noi%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fmasaj%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fmasaj%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fmasaj-cupluri%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fmasaj-cupluri%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fterapia-bowen%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fterapia-bowen%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/gift-card/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fgalerie-foto%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fgalerie-foto%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fcontact%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fcontact%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Ftermeni-si-conditii%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Ftermeni-si-conditii%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-de-confidentialitate%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-de-confidentialitate%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-de-retur-anulare%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-de-retur-anulare%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-cookies%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-cookies%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fabout-us%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fabout-us%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fmassage%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fmassage%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcouples-massage%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcouples-massage%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fbowen-therapy%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fbowen-therapy%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/gift-card-rami-spa/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fphoto-gallery%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fphoto-gallery%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcontact-us%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcontact-us%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fterms-and-conditions%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fterms-and-conditions%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fprivacy-policy%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fprivacy-policy%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Freturn-cancellation-policy%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Freturn-cancellation-policy%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcookies-policy%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcookies-policy%2F&",
+      "status": "content type is not text/html"
     }
   ]
 }
