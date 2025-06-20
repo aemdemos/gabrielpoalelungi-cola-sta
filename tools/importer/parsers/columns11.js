@@ -1,32 +1,36 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // The header row - must be a single cell array exactly as in the spec
-  const headerRow = ['Columns (columns11)'];
+  // Find columns (should be two columns for this block)
+  const columns = Array.from(element.querySelectorAll(':scope > div > div.elementor-column'));
+  if (columns.length < 2) return;
 
-  // Find icon items
-  const itemsWrapper = element.querySelector('.icon-block__items');
-  let itemDivs = [];
-  if (itemsWrapper) {
-    itemDivs = Array.from(itemsWrapper.children).filter(
-      el => el.classList.contains('teaser-icon-item')
+  function getLeftContent(col) {
+    const wrap = col.querySelector(':scope > .elementor-widget-wrap');
+    const widgets = Array.from(wrap.children).filter((el) =>
+      !el.classList.contains('elementor-widget-divider')
     );
+    const container = document.createElement('div');
+    widgets.forEach((el) => container.appendChild(el));
+    return container;
   }
-  // Each column is a div containing the image and heading
-  const columns = itemDivs.map(item => {
-    const colDiv = document.createElement('div');
-    const img = item.querySelector('img');
-    const h4 = item.querySelector('h4');
-    if (img) colDiv.appendChild(img);
-    if (h4) colDiv.appendChild(h4);
-    return colDiv;
-  });
 
-  // Table rows: header, then content (with as many columns as needed)
-  const tableRows = [
-    headerRow,         // single column header
-    columns            // content row: each entry is a column
-  ];
+  function getRightContent(col) {
+    const wrap = col.querySelector(':scope > .elementor-widget-wrap');
+    if (!wrap) return '';
+    const imgs = wrap.querySelectorAll('img');
+    if (imgs.length === 0) return '';
+    if (imgs.length === 1) return imgs[0];
+    const div = document.createElement('div');
+    imgs.forEach(img => div.appendChild(img));
+    return div;
+  }
 
-  const block = WebImporter.DOMUtils.createTable(tableRows, document);
-  element.replaceWith(block);
+  const leftContent = getLeftContent(columns[0]);
+  const rightContent = getRightContent(columns[1]);
+
+  // Header row must match number of columns in the data row: ['Columns (columns11)', '']
+  const headerRow = ['Columns (columns11)', ''];
+  const row = [leftContent, rightContent];
+  const table = WebImporter.DOMUtils.createTable([headerRow, row], document);
+  element.replaceWith(table);
 }
