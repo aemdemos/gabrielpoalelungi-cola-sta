@@ -1,33 +1,33 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Extract the three columns (defensive for missing ones)
-  const columns = Array.from(element.querySelectorAll(':scope > div > div'));
-  while (columns.length < 3) columns.push(document.createElement('div'));
+  // Locate the grid that contains the columns
+  const gridItems = element.querySelector('.cmp-grid-container__items');
+  if (!gridItems) return;
+  const grid = gridItems.querySelector('.aem-Grid');
+  if (!grid) return;
 
-  // For each column, take its .elementor-widget-wrap if found
-  const getWrap = (col) => col.querySelector('.elementor-widget-wrap') || col;
-  const col1 = getWrap(columns[0]);
-  const col2 = getWrap(columns[1]);
-  const col3 = getWrap(columns[2]);
+  // Each .aem-GridColumn is a visual column
+  const columnDivs = Array.from(grid.children).filter(
+    (child) => child.classList.contains('aem-GridColumn')
+  );
 
-  // Build the table: header is a single cell row, content row is three cells
-  const table = document.createElement('table');
-  // Header row - one cell, spanning three columns
-  const trHeader = document.createElement('tr');
-  const th = document.createElement('th');
-  th.colSpan = 3;
-  th.textContent = 'Columns (columns20)';
-  trHeader.appendChild(th);
-  table.appendChild(trHeader);
-
-  // Content row
-  const trContent = document.createElement('tr');
-  [col1, col2, col3].forEach((col) => {
-    const td = document.createElement('td');
-    td.append(col);
-    trContent.appendChild(td);
+  // Build the content row (actual columns)
+  const contentRow = columnDivs.map((col) => {
+    const textEl = col.querySelector('.cmp-text');
+    const imgEl = col.querySelector('.cmp-image');
+    if (textEl && imgEl) return [textEl, imgEl];
+    if (textEl) return textEl;
+    if (imgEl) return imgEl;
+    return col;
   });
-  table.appendChild(trContent);
 
+  if (!contentRow.length) return;
+
+  // Header row must have as many columns as the content row; all but the first cell are empty
+  const headerRow = ['Columns (columns20)'];
+  while (headerRow.length < contentRow.length) headerRow.push('');
+
+  const cells = [headerRow, contentRow];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

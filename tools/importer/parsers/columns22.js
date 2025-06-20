@@ -1,46 +1,30 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // 1. Header row for columns block, as in the example
+  // Find the grid container with the two content columns
+  const gridItems = element.querySelector('.cmp-grid-container__items .aem-Grid');
+  if (!gridItems) return;
+  const columns = Array.from(gridItems.children).filter(col => col.nodeType === 1);
+  if (columns.length < 2) return;
+
+  // Find the column that contains text
+  const textCol = columns.find(col => col.querySelector('.cmp-text'));
+  // Find the column that contains image
+  const imageCol = columns.find(col => col.querySelector('.cmp-image'));
+  if (!textCol || !imageCol) return;
+
+  // Get the main content elements
+  const textContent = textCol.querySelector('.cmp-text');
+  const imageContent = imageCol.querySelector('.cmp-image');
+
+  // Defensive: Ensure elements are found
+  if (!textContent || !imageContent) return;
+
+  // Block table structure
   const headerRow = ['Columns (columns22)'];
+  const contentRow = [textContent, imageContent];
+  const cells = [headerRow, contentRow];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
 
-  // 2. Extract all immediate .teaser-icon-item children
-  const items = Array.from(element.querySelectorAll(':scope > .teaser-icon-item'));
-
-  // 3. Edge case: No items, fallback to empty cell(s)
-  if (items.length === 0) {
-    const table = WebImporter.DOMUtils.createTable([
-      headerRow,
-      ['']
-    ], document);
-    element.replaceWith(table);
-    return;
-  }
-
-  // 4. For each teaser-icon-item, build a cell with the icon and the description (from the p)
-  const cells = items.map((item) => {
-    // Find the icon (img)
-    const img = item.querySelector('img.teaser-icon-item__icon');
-    // Find the desc (p), safely
-    let desc = '';
-    const descDiv = item.querySelector('.teaser-icon-item__desc');
-    if (descDiv) {
-      const p = descDiv.querySelector('p');
-      if (p) desc = p;
-    }
-    // Compose cell contents
-    const contents = [];
-    if (img) contents.push(img);
-    if (img && desc) contents.push(document.createElement('br'));
-    if (desc) contents.push(desc);
-    return contents;
-  });
-
-  // 5. Create the table: header, then a single row with a cell for each column
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    cells
-  ], document);
-
-  // 6. Replace the original element with the table
+  // Replace original element with block table
   element.replaceWith(table);
 }

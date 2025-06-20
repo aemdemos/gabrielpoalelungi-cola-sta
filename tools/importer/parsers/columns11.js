@@ -1,36 +1,63 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find columns (should be two columns for this block)
-  const columns = Array.from(element.querySelectorAll(':scope > div > div.elementor-column'));
-  if (columns.length < 2) return;
+  // Find the main footer element
+  const footer = element.querySelector('footer.footer');
+  if (!footer) return;
+  const cmpFooter = footer.querySelector('.cmp-footer');
+  if (!cmpFooter) return;
 
-  function getLeftContent(col) {
-    const wrap = col.querySelector(':scope > .elementor-widget-wrap');
-    const widgets = Array.from(wrap.children).filter((el) =>
-      !el.classList.contains('elementor-widget-divider')
-    );
-    const container = document.createElement('div');
-    widgets.forEach((el) => container.appendChild(el));
-    return container;
+  // Top section: logo, nav and social
+  const topSection = cmpFooter.querySelector('.cmp-footer__top-section');
+  let col1 = '', col2 = '', col3 = '';
+  if (topSection) {
+    // Column 1: logo and copyright desktop
+    const logoBlock = topSection.querySelector('.cmp-footer__logo-link');
+    if (logoBlock) col1 = logoBlock;
+    // Column 2: nav
+    const navBlock = topSection.querySelector('.cmp-footer__nav');
+    if (navBlock) col2 = navBlock;
+    // Column 3: social
+    const socialBlock = topSection.querySelector('.cmp-footer__social-links');
+    if (socialBlock) col3 = socialBlock;
   }
 
-  function getRightContent(col) {
-    const wrap = col.querySelector(':scope > .elementor-widget-wrap');
-    if (!wrap) return '';
-    const imgs = wrap.querySelectorAll('img');
-    if (imgs.length === 0) return '';
-    if (imgs.length === 1) return imgs[0];
-    const div = document.createElement('div');
-    imgs.forEach(img => div.appendChild(img));
-    return div;
+  // Copyright links (bottom row of links)
+  let copyrightLinksRow = ['', '', ''];
+  const copyrightLinks = cmpFooter.querySelector('.cmp-footer__copyright-links');
+  if (copyrightLinks) copyrightLinksRow = [copyrightLinks, '', ''];
+
+  // Copyright text (prefer desktop, fallback to mobile)
+  let copyrightTextRow = ['', '', ''];
+  let copyrightText = cmpFooter.querySelector('.cmp-footer__copyright-text-desktop');
+  if (!copyrightText) copyrightText = cmpFooter.querySelector('.cmp-footer__copyright-text-mobile');
+  if (copyrightText) copyrightTextRow = [copyrightText, '', ''];
+
+  // The correct header row must be a single cell
+  const headerRow = ['Columns (columns11)'];
+
+  // Compose columns row
+  const columnsRow = [col1, col2, col3];
+
+  // Build the 2D cells array with the header as a single cell in its own row
+  const cells = [
+    headerRow,         // 1 cell (header)
+    columnsRow,        // 3 cells (content columns)
+    copyrightLinksRow, // 3 cells (links row)
+    copyrightTextRow   // 3 cells (copyright text row)
+  ];
+
+  // Use createTable, then manually set colspan on the header row th
+  const table = WebImporter.DOMUtils.createTable(cells, document);
+  const headerTh = table.querySelector('tr:first-child > th');
+  if (headerTh) {
+    headerTh.setAttribute('colspan', '3');
   }
-
-  const leftContent = getLeftContent(columns[0]);
-  const rightContent = getRightContent(columns[1]);
-
-  // Header row must match number of columns in the data row: ['Columns (columns11)', '']
-  const headerRow = ['Columns (columns11)', ''];
-  const row = [leftContent, rightContent];
-  const table = WebImporter.DOMUtils.createTable([headerRow, row], document);
+  // Remove any extra th in header row if they exist
+  const headerTr = table.querySelector('tr:first-child');
+  if (headerTr) {
+    while (headerTr.children.length > 1) {
+      headerTr.removeChild(headerTr.lastChild);
+    }
+  }
   element.replaceWith(table);
 }
