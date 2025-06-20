@@ -1,114 +1,420 @@
 {
-  "originUrl": "https://www.myelomaandme.co.uk",
-  "lastCrawled": "https://www.myelomaandme.co.uk/",
+  "originUrl": "https://www.hotelunirea.ro",
+  "lastCrawled": "https://www.hotelunirea.ro/",
   "urls": [
     {
-      "url": "https://www.myelomaandme.co.uk/",
+      "url": "https://www.hotelunirea.ro/en/",
       "source": "CRAWL",
-      "targetPath": "/",
-      "id": "6320aff2a137321ed1d827fd7d642802517bba4d"
+      "targetPath": "/en",
+      "id": "9780caf7d5a7f3ce291806f05e22d010988ea5d4"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/appointment-support",
+      "url": "https://www.hotelunirea.ro/en/career/",
       "source": "CRAWL",
-      "targetPath": "/appointment-support",
-      "id": "6d882a223dfc522608bbfa25cd2420bd95abad40"
+      "targetPath": "/en/career",
+      "id": "15e0b71aab73e653571fdf70610cdcffba435e2e"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/care-partner",
+      "url": "https://www.hotelunirea.ro/en/contact_us/",
       "source": "CRAWL",
-      "targetPath": "/care-partner",
-      "id": "8f33aafcb8413900159a697d410e08fd1c9431c6"
+      "targetPath": "/en/contact-us",
+      "id": "7bb50849c5e81c25cf6021b0d3325c0709ca6c66"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/communicating-effectively",
+      "url": "https://www.hotelunirea.ro/en/cookie_policy/",
       "source": "CRAWL",
-      "targetPath": "/communicating-effectively",
-      "id": "18f216fb37fe181476c3a20366cab5eb14b1a05f"
+      "targetPath": "/en/cookie-policy",
+      "id": "75b12752e6eb37cecb87ce9845e4bb472b66c841"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/connecting-with-others",
+      "url": "https://www.hotelunirea.ro/en/gallery/",
       "source": "CRAWL",
-      "targetPath": "/connecting-with-others",
-      "id": "2ae97135d86886b16cc4c38485465f9fa34c58a9"
+      "targetPath": "/en/gallery",
+      "id": "0cded3d390cdb980b7bfcdcca2601d524a3b9c24"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/diet",
+      "url": "https://www.hotelunirea.ro/en/halls/",
       "source": "CRAWL",
-      "targetPath": "/diet",
-      "id": "35088c0b88edafa092d27aef4f94bffe1cf57a30"
+      "targetPath": "/en/halls",
+      "id": "b2301273b168fc361f31f1607be30c797a8e690a"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/find-what-matters-to-you",
+      "url": "https://www.hotelunirea.ro/en/halls/1/",
       "source": "CRAWL",
-      "targetPath": "/find-what-matters-to-you",
-      "id": "8ab207df28d9be9f2e6cba1181a8c0e0d544dd09"
+      "targetPath": "/en/halls/1",
+      "id": "9b0c358813e9e567484251cd02e8d3c00512ef56"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/find-what-matters-to-you?mm-tool-id=4",
+      "url": "https://www.hotelunirea.ro/en/halls/3/",
       "source": "CRAWL",
-      "targetPath": "/find-what-matters-to-you",
-      "id": "1738f0f8804ae1bb27309429efc721b61b74f138"
+      "targetPath": "/en/halls/3",
+      "id": "2fc869f3520dd62b83acd0ab6cd967de2d7e1c49"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/managing-conversations",
+      "url": "https://www.hotelunirea.ro/en/halls/4/",
       "source": "CRAWL",
-      "targetPath": "/managing-conversations",
-      "id": "01b4cb512ef239b2447fb1f98f0898fd4325266a"
+      "targetPath": "/en/halls/4",
+      "id": "34d2fbe2c7c102bb44eb61be2e759abfcc898f84"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/mental-health",
+      "url": "https://www.hotelunirea.ro/en/halls/5/",
       "source": "CRAWL",
-      "targetPath": "/mental-health",
-      "id": "868a22bbc73ce1927c91c476165ffbad540c626f"
+      "targetPath": "/en/halls/5",
+      "id": "6d956f8f7a8ac635d58e7d6a14f406b6e4188dce"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/physical-health",
+      "url": "https://www.hotelunirea.ro/en/halls/6/",
       "source": "CRAWL",
-      "targetPath": "/physical-health",
-      "id": "1f21abfd783cd2cfd0b5546afadece89b71535c0"
+      "targetPath": "/en/halls/6",
+      "id": "24598123cb627c7017c511fbb8588143c8fc8c39"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/preparing-for-your-appointments",
+      "url": "https://www.hotelunirea.ro/en/hotel_policy/",
       "source": "CRAWL",
-      "targetPath": "/preparing-for-your-appointments",
-      "id": "9644f82aae1f6f07d4bb61799f039b4b1a8b7f80"
+      "targetPath": "/en/hotel-policy",
+      "id": "81e2c635e9f9da7ba927b25b48923aaf740913b9"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/speaking-with-your-care-partner",
+      "url": "https://www.hotelunirea.ro/en/legal_information/",
       "source": "CRAWL",
-      "targetPath": "/speaking-with-your-care-partner",
-      "id": "82e3f01a5a8ecc4cb0e760ec8cdf829a32e53e81"
+      "targetPath": "/en/legal-information",
+      "id": "8c775457f5936b53e53a7925db1d4e49edeef967"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/speaking-your-healthcare-team",
+      "url": "https://www.hotelunirea.ro/en/location/",
       "source": "CRAWL",
-      "targetPath": "/speaking-your-healthcare-team",
-      "id": "2d17ef568f4c17b47dc4b5ff38116b29bf0a35b9"
+      "targetPath": "/en/location",
+      "id": "221c012f7568549afe451b1ecd59a06e5e26af26"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/website-terms-use",
+      "url": "https://www.hotelunirea.ro/en/meetings_i_events/",
       "source": "CRAWL",
-      "targetPath": "/website-terms-use",
-      "id": "229594456c7d5eb69af9ef46e7e0708a40124d30"
+      "targetPath": "/en/meetings-i-events",
+      "id": "7e1d5c60eef39cedad25896a1ac66991f443fde5"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/wellbeing",
+      "url": "https://www.hotelunirea.ro/en/meetings_i_events/5/",
       "source": "CRAWL",
-      "targetPath": "/wellbeing",
-      "id": "10f482607a012916d022fcf0ea5a4e66692d6358"
+      "targetPath": "/en/meetings-i-events/5",
+      "id": "d9d7d2f7329767b07374d0f95cbf13775b5ca08a"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/Wellbeing",
+      "url": "https://www.hotelunirea.ro/en/meetings_i_events/6/",
       "source": "CRAWL",
-      "targetPath": "/wellbeing",
-      "id": "c47561d35fcad93a1ffd4f80af158ab7627aa863"
+      "targetPath": "/en/meetings-i-events/6",
+      "id": "c59b32187311846fc84bdbf355006c24e585ffe8"
     },
     {
-      "url": "https://www.myelomaandme.co.uk/working-through-potential-disagreements",
+      "url": "https://www.hotelunirea.ro/en/offers/",
       "source": "CRAWL",
-      "targetPath": "/working-through-potential-disagreements",
-      "id": "35748fe91cbd9771dd3748c5e1e0beb63074d195"
+      "targetPath": "/en/offers",
+      "id": "be36a99d081809f747039309efe83985e666b22e"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/corporate_day_pack/",
+      "source": "CRAWL",
+      "targetPath": "/en/offers/corporate-day-pack",
+      "id": "b9c4472a0ebeafa0b8ca85cf392b03e1a2e695fd"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/full_day_relax/",
+      "source": "CRAWL",
+      "targetPath": "/en/offers/full-day-relax",
+      "id": "8badddb9a61e3c7173b43e251b2403eb450f6d6e"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/happy_birthday/",
+      "source": "CRAWL",
+      "targetPath": "/en/offers/happy-birthday",
+      "id": "5efb0b6455ba95c5151f5a34759770bd04a4b82e"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/iasi_traveler_-_city_break/",
+      "source": "CRAWL",
+      "targetPath": "/en/offers/iasi-traveler-city-break",
+      "id": "96d1258954a45a2ffc8c4647febee9d61c4de890"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/lovely_days/",
+      "source": "CRAWL",
+      "targetPath": "/en/offers/lovely-days",
+      "id": "7ec7ea35e8a48da93870fadce240d260bf1284cb"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/relax_package/",
+      "source": "CRAWL",
+      "targetPath": "/en/offers/relax-package",
+      "id": "59decb1c364c0292acf32a826d94dfe463e0f78b"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/romantic_package_/",
+      "source": "CRAWL",
+      "targetPath": "/en/offers/romantic-package",
+      "id": "5dd1fabea3819e5fc02fdede477f948fca207ff6"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii/",
+      "source": "CRAWL",
+      "targetPath": "/en/offers/sejur-familie-27-29-iunie-cu-cazare-gratuita-pentru-copii",
+      "id": "2d44e91c6bf0af9e6ba74e5a84ea20be591dced5"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/vip_package/",
+      "source": "CRAWL",
+      "targetPath": "/en/offers/vip-package",
+      "id": "f62287c323933d10c184539174e00848b245d93b"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/privacy_policy/",
+      "source": "CRAWL",
+      "targetPath": "/en/privacy-policy",
+      "id": "d8a4fdd45f6525e5a0cba4c7d0192aadf58ca4f7"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/ristorante_panoramic/",
+      "source": "CRAWL",
+      "targetPath": "/en/ristorante-panoramic",
+      "id": "808c8e38e4878dabf25916981fe2caa60d86e374"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/rooms/",
+      "source": "CRAWL",
+      "targetPath": "/en/rooms",
+      "id": "31c107fdf6214a7fbed4dadfd010ae6266b53dd3"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/rooms/4/",
+      "source": "CRAWL",
+      "targetPath": "/en/rooms/4",
+      "id": "4a9051668893243f3bc4b1304a1f60918b5ada65"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/rooms/5/",
+      "source": "CRAWL",
+      "targetPath": "/en/rooms/5",
+      "id": "245f2ee4758b1c138c1eca22414d2ae531ec7583"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/unirea_breakfast/",
+      "source": "CRAWL",
+      "targetPath": "/en/unirea-breakfast",
+      "id": "5810a6036c194a7cbac02e52ae4789c557a5fd6b"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/webcam/",
+      "source": "CRAWL",
+      "targetPath": "/en/webcam",
+      "id": "2096f6480b49837273f022aad6499aff7f25af86"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/",
+      "source": "CRAWL",
+      "targetPath": "/ro",
+      "id": "6530570b858a3f509394207d3877c66bb45520bb"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/camere/",
+      "source": "CRAWL",
+      "targetPath": "/ro/camere",
+      "id": "4bc52e3e846359a009b3c94d9ba84974c824e79e"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/camere/4/",
+      "source": "CRAWL",
+      "targetPath": "/ro/camere/4",
+      "id": "3cdfc3c34892456cb487336bf3c78dd780a37d04"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/camere/5/",
+      "source": "CRAWL",
+      "targetPath": "/ro/camere/5",
+      "id": "753d02a2d374be1dea70fe3e7b3718180b60cabf"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/cariera/",
+      "source": "CRAWL",
+      "targetPath": "/ro/cariera",
+      "id": "478de140ef50161c70ec8818e0ae81c1575e20dd"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/contacteaza-ne/",
+      "source": "CRAWL",
+      "targetPath": "/ro/contacteaza-ne",
+      "id": "5377ce03ff975e15477f6c3c44e8495e7f011496"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/galerie/",
+      "source": "CRAWL",
+      "targetPath": "/ro/galerie",
+      "id": "5dcdffdef643508ca1d680913c934cee84cda78b"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/informatii_legale/",
+      "source": "CRAWL",
+      "targetPath": "/ro/informatii-legale",
+      "id": "010219b8e7a9be0f2989d0489fea729e45260865"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/",
+      "source": "CRAWL",
+      "targetPath": "/ro/intalniri-si-evenimente",
+      "id": "5f78802a64915d28a1c4d2420a86138c250c6944"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/5/",
+      "source": "CRAWL",
+      "targetPath": "/ro/intalniri-si-evenimente/5",
+      "id": "04fc8ed401ab5e831c46596d41d0fd2b3c813bf2"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/6/",
+      "source": "CRAWL",
+      "targetPath": "/ro/intalniri-si-evenimente/6",
+      "id": "c4e09d9890ff71881cfc0173c7371af6aaf9de31"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/locatie/",
+      "source": "CRAWL",
+      "targetPath": "/ro/locatie",
+      "id": "6a25b6fe81c807a4ca7840a131fc456507e86674"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte",
+      "id": "788aabf4d83cb833451bf5ab7165915a49cbf0ae"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/calator_prin_iasi_-_city_break/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/calator-prin-iasi-city-break",
+      "id": "9bb605c8caa2aca551b0206300946604383485e7"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/corporate_day_pack/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/corporate-day-pack",
+      "id": "a7f2d071302b23ca53849febf7814f8b4ee5e33c"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/full_day_relax/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/full-day-relax",
+      "id": "4d7f13af61cb2427fc1b347259f73b195baa34eb"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/happy_birthday/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/happy-birthday",
+      "id": "ed192a42a493eeaef0441c24851bdef1598396c9"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/lovely_days/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/lovely-days",
+      "id": "cfb690b33b2c86bdb9efd0ec3c0b37aab108d24f"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/relax_package/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/relax-package",
+      "id": "ca8efd99ab71108b9faaa2f6891a15a0463f3673"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/romantic_package_/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/romantic-package",
+      "id": "891a2991c9c1315a4fb86017a8f3413221437b6d"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/sejur-familie-27-29-iunie-cu-cazare-gratuita-pentru-copii",
+      "id": "ca951d31d49d05ceb4afbbb075d3b3f6dbb29e7a"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/valentines_day_la_panoramic_-_taste_of_love/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/valentines-day-la-panoramic-taste-of-love",
+      "id": "fed00ec7ec031e752dfb657046f944e1ceeed1db"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/vip_package/",
+      "source": "CRAWL",
+      "targetPath": "/ro/oferte/vip-package",
+      "id": "123e1b43ac092bc38f8ee179b0951161eff0af16"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/politica_cookie-urilor/",
+      "source": "CRAWL",
+      "targetPath": "/ro/politica-cookie-urilor",
+      "id": "ce367e6bc04f5081b0e9ace34865246b6e4a2893"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/politica_de_confidentialitate/",
+      "source": "CRAWL",
+      "targetPath": "/ro/politica-de-confidentialitate",
+      "id": "e0a826210caae0d956728f1f480f4828c0fdf12c"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/regulament_hotelier/",
+      "source": "CRAWL",
+      "targetPath": "/ro/regulament-hotelier",
+      "id": "665a106e9b5d0442cf8093d95bfa5705848fb968"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/restaurant_panoramic/",
+      "source": "CRAWL",
+      "targetPath": "/ro/restaurant-panoramic",
+      "id": "24e22f13b84d06b1be2927a5fc621f68526126c6"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/",
+      "source": "CRAWL",
+      "targetPath": "/ro/sali",
+      "id": "68b7f3ac1d367ad1b5081a6e3dc433eb768108aa"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/1/",
+      "source": "CRAWL",
+      "targetPath": "/ro/sali/1",
+      "id": "ea42f74ce695b1698e26b4085433019cc45ae6cf"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/3/",
+      "source": "CRAWL",
+      "targetPath": "/ro/sali/3",
+      "id": "cc6beb5402f8cee9c091b3745b4742a5f79f3f2d"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/4/",
+      "source": "CRAWL",
+      "targetPath": "/ro/sali/4",
+      "id": "75280f09dd018f2fb26399f3e3a7435abe6178f1"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/5/",
+      "source": "CRAWL",
+      "targetPath": "/ro/sali/5",
+      "id": "b1e6ea61d5cf81b2b05e3b8fac14c48b897e7b6c"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/6/",
+      "source": "CRAWL",
+      "targetPath": "/ro/sali/6",
+      "id": "87fb93a15c6168dcefd8fbfb4be7c064db5173bf"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/unirea_breakfast/",
+      "source": "CRAWL",
+      "targetPath": "/ro/unirea-breakfast",
+      "id": "7c5d73a67203086e2e444b1c6b080755b724e305"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/webcam/",
+      "source": "CRAWL",
+      "targetPath": "/ro/webcam",
+      "id": "ae35d4f1ace9d74061ef3975339513ac356a6462"
     }
   ],
   "crawlOptions": {
@@ -126,7 +432,319 @@
   },
   "extractionErrors": [
     {
-      "url": "https://www.myelomaandme.co.uk/pre-appointment-checklist",
+      "url": "https://www.hotelunirea.ro/ro/unirea_spa/",
+      "status": "301 Moved Permanently Redirect: https://shop.unireaspa.ro/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/unirea_spa/",
+      "status": "301 Moved Permanently Redirect: https://shop.unireaspa.ro/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/career",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/career/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/contact_us",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/contact_us/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/cookie_policy",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/cookie_policy/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/gallery",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/gallery/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/halls",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/halls/1",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/1/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/halls/3",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/3/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/halls/4",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/4/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/halls/5",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/5/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/halls/6",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/6/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/hotel_policy",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/hotel_policy/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/legal_information",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/legal_information/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/location",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/location/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/meetings_i_events",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/meetings_i_events/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/meetings_i_events/5",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/meetings_i_events/5/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/meetings_i_events/6",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/meetings_i_events/6/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/corporate_day_pack",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/corporate_day_pack/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/full_day_relax",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/full_day_relax/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/happy_birthday",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/happy_birthday/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/iasi_traveler_-_city_break",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/iasi_traveler_-_city_break/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/lovely_days",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/lovely_days/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/relax_package",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/relax_package/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/romantic_package_",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/romantic_package_/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/offers/vip_package",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/vip_package/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/privacy_policy",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/privacy_policy/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/ristorante_panoramic",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/ristorante_panoramic/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/rooms",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/rooms/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/rooms/4",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/rooms/4/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/rooms/5",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/rooms/5/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/unirea_breakfast",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/unirea_breakfast/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/unirea_spa",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/unirea_spa/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/webcam",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/webcam/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro//ilab.ro/en",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ilab.ro/en/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro//ilab.ro/ro",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ilab.ro/ro/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/camere",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/camere/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/camere/4",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/camere/4/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/camere/5",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/camere/5/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/cariera",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/cariera/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/contacteaza-ne",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/contacteaza-ne/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/galerie",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/galerie/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/informatii_legale",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/informatii_legale/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/intalniri_si_evenimente/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/5",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/intalniri_si_evenimente/5/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/6",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/intalniri_si_evenimente/6/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/locatie",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/locatie/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/calator_prin_iasi_-_city_break",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/calator_prin_iasi_-_city_break/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/corporate_day_pack",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/corporate_day_pack/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/full_day_relax",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/full_day_relax/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/happy_birthday",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/happy_birthday/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/lovely_days",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/lovely_days/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/relax_package",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/relax_package/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/romantic_package_",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/romantic_package_/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/oferte/vip_package",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/vip_package/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/politica_cookie-urilor",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/politica_cookie-urilor/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/politica_de_confidentialitate",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/politica_de_confidentialitate/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/regulament_hotelier",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/regulament_hotelier/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/restaurant_panoramic",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/restaurant_panoramic/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/1",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/1/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/3",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/3/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/4",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/4/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/5",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/5/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/sali/6",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/6/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/unirea_breakfast",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/unirea_breakfast/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/unirea_spa",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/unirea_spa/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/webcam",
+      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/webcam/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/",
+      "status": "302 Found Redirect: https://www.hotelunirea.ro/ro/"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ilab.ro/ro/",
+      "status": "404 Not Found"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ro/masuri_de_preventie_protectie_si_siguranta_in_contextul_situatiei_actuale/",
+      "status": "404 Not Found"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/ilab.ro/en/",
+      "status": "404 Not Found"
+    },
+    {
+      "url": "https://www.hotelunirea.ro/en/prevention_protection_and_safety_measures_in_the_current_situation__/",
       "status": "404 Not Found"
     }
   ]
