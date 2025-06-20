@@ -1,420 +1,156 @@
 {
-  "originUrl": "https://www.hotelunirea.ro",
-  "lastCrawled": "https://www.hotelunirea.ro/",
+  "originUrl": "https://ramispa.ro",
+  "lastCrawled": "https://ramispa.ro/",
   "urls": [
     {
-      "url": "https://www.hotelunirea.ro/en/",
+      "url": "https://ramispa.ro/",
+      "source": "CRAWL",
+      "targetPath": "/",
+      "id": "2f4e260b4d2e4f6eb8992f4da0d578867f4c5ac5"
+    },
+    {
+      "url": "https://ramispa.ro/contact/",
+      "source": "CRAWL",
+      "targetPath": "/contact",
+      "id": "2fabf6f326d95b6e18f33dad9a751bf75ac2261e"
+    },
+    {
+      "url": "https://ramispa.ro/despre-noi/",
+      "source": "CRAWL",
+      "targetPath": "/despre-noi",
+      "id": "13d10bb1f0019bb94e07df5acfb07b2b70094ffc"
+    },
+    {
+      "url": "https://ramispa.ro/en/",
       "source": "CRAWL",
       "targetPath": "/en",
-      "id": "9780caf7d5a7f3ce291806f05e22d010988ea5d4"
+      "id": "b09bb734083d59b0f086605fd572752b5ea4ee51"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/career/",
+      "url": "https://ramispa.ro/en/about-us/",
       "source": "CRAWL",
-      "targetPath": "/en/career",
-      "id": "15e0b71aab73e653571fdf70610cdcffba435e2e"
+      "targetPath": "/en/about-us",
+      "id": "1c7857d05378d516853996ae2bf7983acac36499"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/contact_us/",
+      "url": "https://ramispa.ro/en/bowen-therapy/",
+      "source": "CRAWL",
+      "targetPath": "/en/bowen-therapy",
+      "id": "02ff0ea9e5eb8ba583a1a6f852baaba30015588b"
+    },
+    {
+      "url": "https://ramispa.ro/en/contact-us/",
       "source": "CRAWL",
       "targetPath": "/en/contact-us",
-      "id": "7bb50849c5e81c25cf6021b0d3325c0709ca6c66"
+      "id": "4012c819ab9a06287a73bc2d6a0f52b47aa250d3"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/cookie_policy/",
+      "url": "https://ramispa.ro/en/cookies-policy/",
       "source": "CRAWL",
-      "targetPath": "/en/cookie-policy",
-      "id": "75b12752e6eb37cecb87ce9845e4bb472b66c841"
+      "targetPath": "/en/cookies-policy",
+      "id": "ed3aab11d48ea8dbb69b5a24a69ed0b9b0f280b7"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/gallery/",
+      "url": "https://ramispa.ro/en/couples-massage/",
       "source": "CRAWL",
-      "targetPath": "/en/gallery",
-      "id": "0cded3d390cdb980b7bfcdcca2601d524a3b9c24"
+      "targetPath": "/en/couples-massage",
+      "id": "40d42129c0c98908b53ab3132ab04a7ed3f234eb"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/",
+      "url": "https://ramispa.ro/en/gift-card-rami-spa/",
       "source": "CRAWL",
-      "targetPath": "/en/halls",
-      "id": "b2301273b168fc361f31f1607be30c797a8e690a"
+      "targetPath": "/en/gift-card-rami-spa",
+      "id": "aafb8ec0eb7ec623f9ddae4a47cc5a671080604a"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/1/",
+      "url": "https://ramispa.ro/en/massage/",
       "source": "CRAWL",
-      "targetPath": "/en/halls/1",
-      "id": "9b0c358813e9e567484251cd02e8d3c00512ef56"
+      "targetPath": "/en/massage",
+      "id": "cefe5855aa083faa1116a5602a6004dac775e094"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/3/",
+      "url": "https://ramispa.ro/en/massage//",
       "source": "CRAWL",
-      "targetPath": "/en/halls/3",
-      "id": "2fc869f3520dd62b83acd0ab6cd967de2d7e1c49"
+      "targetPath": "/en/massage",
+      "id": "ac6024b16ef4fc78fc82a08efe56112900e2ccb9"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/4/",
+      "url": "https://ramispa.ro/en/photo-gallery/",
       "source": "CRAWL",
-      "targetPath": "/en/halls/4",
-      "id": "34d2fbe2c7c102bb44eb61be2e759abfcc898f84"
+      "targetPath": "/en/photo-gallery",
+      "id": "ff6294045c093b3b8516a1f05b302d75c55ed46a"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/5/",
-      "source": "CRAWL",
-      "targetPath": "/en/halls/5",
-      "id": "6d956f8f7a8ac635d58e7d6a14f406b6e4188dce"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/halls/6/",
-      "source": "CRAWL",
-      "targetPath": "/en/halls/6",
-      "id": "24598123cb627c7017c511fbb8588143c8fc8c39"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/hotel_policy/",
-      "source": "CRAWL",
-      "targetPath": "/en/hotel-policy",
-      "id": "81e2c635e9f9da7ba927b25b48923aaf740913b9"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/legal_information/",
-      "source": "CRAWL",
-      "targetPath": "/en/legal-information",
-      "id": "8c775457f5936b53e53a7925db1d4e49edeef967"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/location/",
-      "source": "CRAWL",
-      "targetPath": "/en/location",
-      "id": "221c012f7568549afe451b1ecd59a06e5e26af26"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/meetings_i_events/",
-      "source": "CRAWL",
-      "targetPath": "/en/meetings-i-events",
-      "id": "7e1d5c60eef39cedad25896a1ac66991f443fde5"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/meetings_i_events/5/",
-      "source": "CRAWL",
-      "targetPath": "/en/meetings-i-events/5",
-      "id": "d9d7d2f7329767b07374d0f95cbf13775b5ca08a"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/meetings_i_events/6/",
-      "source": "CRAWL",
-      "targetPath": "/en/meetings-i-events/6",
-      "id": "c59b32187311846fc84bdbf355006c24e585ffe8"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers",
-      "id": "be36a99d081809f747039309efe83985e666b22e"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/corporate_day_pack/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers/corporate-day-pack",
-      "id": "b9c4472a0ebeafa0b8ca85cf392b03e1a2e695fd"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/full_day_relax/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers/full-day-relax",
-      "id": "8badddb9a61e3c7173b43e251b2403eb450f6d6e"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/happy_birthday/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers/happy-birthday",
-      "id": "5efb0b6455ba95c5151f5a34759770bd04a4b82e"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/iasi_traveler_-_city_break/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers/iasi-traveler-city-break",
-      "id": "96d1258954a45a2ffc8c4647febee9d61c4de890"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/lovely_days/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers/lovely-days",
-      "id": "7ec7ea35e8a48da93870fadce240d260bf1284cb"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/relax_package/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers/relax-package",
-      "id": "59decb1c364c0292acf32a826d94dfe463e0f78b"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/romantic_package_/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers/romantic-package",
-      "id": "5dd1fabea3819e5fc02fdede477f948fca207ff6"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers/sejur-familie-27-29-iunie-cu-cazare-gratuita-pentru-copii",
-      "id": "2d44e91c6bf0af9e6ba74e5a84ea20be591dced5"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/offers/vip_package/",
-      "source": "CRAWL",
-      "targetPath": "/en/offers/vip-package",
-      "id": "f62287c323933d10c184539174e00848b245d93b"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/en/privacy_policy/",
+      "url": "https://ramispa.ro/en/privacy-policy/",
       "source": "CRAWL",
       "targetPath": "/en/privacy-policy",
-      "id": "d8a4fdd45f6525e5a0cba4c7d0192aadf58ca4f7"
+      "id": "fd3ffc4b64bd2ce83ab917acbe16f374de3df201"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/ristorante_panoramic/",
+      "url": "https://ramispa.ro/en/return-cancellation-policy/",
       "source": "CRAWL",
-      "targetPath": "/en/ristorante-panoramic",
-      "id": "808c8e38e4878dabf25916981fe2caa60d86e374"
+      "targetPath": "/en/return-cancellation-policy",
+      "id": "49bdbd9f1743ce9a459415ad1ef00c719459c3fd"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/rooms/",
+      "url": "https://ramispa.ro/en/terms-and-conditions/",
       "source": "CRAWL",
-      "targetPath": "/en/rooms",
-      "id": "31c107fdf6214a7fbed4dadfd010ae6266b53dd3"
+      "targetPath": "/en/terms-and-conditions",
+      "id": "bf0e9c95083e5debf19114f2141a5b3bf2625f36"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/rooms/4/",
+      "url": "https://ramispa.ro/galerie-foto/",
       "source": "CRAWL",
-      "targetPath": "/en/rooms/4",
-      "id": "4a9051668893243f3bc4b1304a1f60918b5ada65"
+      "targetPath": "/galerie-foto",
+      "id": "d9e6d6b8f833a7826470c489353b7efc48628235"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/rooms/5/",
+      "url": "https://ramispa.ro/gift-card/",
       "source": "CRAWL",
-      "targetPath": "/en/rooms/5",
-      "id": "245f2ee4758b1c138c1eca22414d2ae531ec7583"
+      "targetPath": "/gift-card",
+      "id": "af678b49985f034140c25cf69739cd6ad7741d82"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/unirea_breakfast/",
+      "url": "https://ramispa.ro/masaj-cupluri/",
       "source": "CRAWL",
-      "targetPath": "/en/unirea-breakfast",
-      "id": "5810a6036c194a7cbac02e52ae4789c557a5fd6b"
+      "targetPath": "/masaj-cupluri",
+      "id": "c4c664dae153b453c3216828aac44213151808b4"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/webcam/",
+      "url": "https://ramispa.ro/masaj/",
       "source": "CRAWL",
-      "targetPath": "/en/webcam",
-      "id": "2096f6480b49837273f022aad6499aff7f25af86"
+      "targetPath": "/masaj",
+      "id": "f3dbdced2b4cfcde5caedf70642b80fbbd2ab156"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/",
+      "url": "https://ramispa.ro/politica-cookies/",
       "source": "CRAWL",
-      "targetPath": "/ro",
-      "id": "6530570b858a3f509394207d3877c66bb45520bb"
+      "targetPath": "/politica-cookies",
+      "id": "01bd8c2a2d71ef9456934ec3e3601e07894fa935"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/camere/",
+      "url": "https://ramispa.ro/politica-de-confidentialitate/",
       "source": "CRAWL",
-      "targetPath": "/ro/camere",
-      "id": "4bc52e3e846359a009b3c94d9ba84974c824e79e"
+      "targetPath": "/politica-de-confidentialitate",
+      "id": "ab0398ca854cd380966a325dc8b67545444e66ff"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/camere/4/",
+      "url": "https://ramispa.ro/politica-de-retur-anulare/",
       "source": "CRAWL",
-      "targetPath": "/ro/camere/4",
-      "id": "3cdfc3c34892456cb487336bf3c78dd780a37d04"
+      "targetPath": "/politica-de-retur-anulare",
+      "id": "a0e21ad7ca93b75d80ecc5ef0cb42d58ad8d0a51"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/camere/5/",
+      "url": "https://ramispa.ro/terapia-bowen/",
       "source": "CRAWL",
-      "targetPath": "/ro/camere/5",
-      "id": "753d02a2d374be1dea70fe3e7b3718180b60cabf"
+      "targetPath": "/terapia-bowen",
+      "id": "5baa75b4d80ade8b6efd270fdcf3e3fe48fb18d6"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/cariera/",
+      "url": "https://ramispa.ro/termeni-si-conditii/",
       "source": "CRAWL",
-      "targetPath": "/ro/cariera",
-      "id": "478de140ef50161c70ec8818e0ae81c1575e20dd"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/contacteaza-ne/",
-      "source": "CRAWL",
-      "targetPath": "/ro/contacteaza-ne",
-      "id": "5377ce03ff975e15477f6c3c44e8495e7f011496"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/galerie/",
-      "source": "CRAWL",
-      "targetPath": "/ro/galerie",
-      "id": "5dcdffdef643508ca1d680913c934cee84cda78b"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/informatii_legale/",
-      "source": "CRAWL",
-      "targetPath": "/ro/informatii-legale",
-      "id": "010219b8e7a9be0f2989d0489fea729e45260865"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/",
-      "source": "CRAWL",
-      "targetPath": "/ro/intalniri-si-evenimente",
-      "id": "5f78802a64915d28a1c4d2420a86138c250c6944"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/5/",
-      "source": "CRAWL",
-      "targetPath": "/ro/intalniri-si-evenimente/5",
-      "id": "04fc8ed401ab5e831c46596d41d0fd2b3c813bf2"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/6/",
-      "source": "CRAWL",
-      "targetPath": "/ro/intalniri-si-evenimente/6",
-      "id": "c4e09d9890ff71881cfc0173c7371af6aaf9de31"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/locatie/",
-      "source": "CRAWL",
-      "targetPath": "/ro/locatie",
-      "id": "6a25b6fe81c807a4ca7840a131fc456507e86674"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte",
-      "id": "788aabf4d83cb833451bf5ab7165915a49cbf0ae"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/calator_prin_iasi_-_city_break/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/calator-prin-iasi-city-break",
-      "id": "9bb605c8caa2aca551b0206300946604383485e7"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/corporate_day_pack/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/corporate-day-pack",
-      "id": "a7f2d071302b23ca53849febf7814f8b4ee5e33c"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/full_day_relax/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/full-day-relax",
-      "id": "4d7f13af61cb2427fc1b347259f73b195baa34eb"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/happy_birthday/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/happy-birthday",
-      "id": "ed192a42a493eeaef0441c24851bdef1598396c9"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/lovely_days/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/lovely-days",
-      "id": "cfb690b33b2c86bdb9efd0ec3c0b37aab108d24f"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/relax_package/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/relax-package",
-      "id": "ca8efd99ab71108b9faaa2f6891a15a0463f3673"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/romantic_package_/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/romantic-package",
-      "id": "891a2991c9c1315a4fb86017a8f3413221437b6d"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/sejur-familie-27-29-iunie-cu-cazare-gratuita-pentru-copii",
-      "id": "ca951d31d49d05ceb4afbbb075d3b3f6dbb29e7a"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/valentines_day_la_panoramic_-_taste_of_love/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/valentines-day-la-panoramic-taste-of-love",
-      "id": "fed00ec7ec031e752dfb657046f944e1ceeed1db"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/vip_package/",
-      "source": "CRAWL",
-      "targetPath": "/ro/oferte/vip-package",
-      "id": "123e1b43ac092bc38f8ee179b0951161eff0af16"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/politica_cookie-urilor/",
-      "source": "CRAWL",
-      "targetPath": "/ro/politica-cookie-urilor",
-      "id": "ce367e6bc04f5081b0e9ace34865246b6e4a2893"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/politica_de_confidentialitate/",
-      "source": "CRAWL",
-      "targetPath": "/ro/politica-de-confidentialitate",
-      "id": "e0a826210caae0d956728f1f480f4828c0fdf12c"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/regulament_hotelier/",
-      "source": "CRAWL",
-      "targetPath": "/ro/regulament-hotelier",
-      "id": "665a106e9b5d0442cf8093d95bfa5705848fb968"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/restaurant_panoramic/",
-      "source": "CRAWL",
-      "targetPath": "/ro/restaurant-panoramic",
-      "id": "24e22f13b84d06b1be2927a5fc621f68526126c6"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/",
-      "source": "CRAWL",
-      "targetPath": "/ro/sali",
-      "id": "68b7f3ac1d367ad1b5081a6e3dc433eb768108aa"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/1/",
-      "source": "CRAWL",
-      "targetPath": "/ro/sali/1",
-      "id": "ea42f74ce695b1698e26b4085433019cc45ae6cf"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/3/",
-      "source": "CRAWL",
-      "targetPath": "/ro/sali/3",
-      "id": "cc6beb5402f8cee9c091b3745b4742a5f79f3f2d"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/4/",
-      "source": "CRAWL",
-      "targetPath": "/ro/sali/4",
-      "id": "75280f09dd018f2fb26399f3e3a7435abe6178f1"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/5/",
-      "source": "CRAWL",
-      "targetPath": "/ro/sali/5",
-      "id": "b1e6ea61d5cf81b2b05e3b8fac14c48b897e7b6c"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/6/",
-      "source": "CRAWL",
-      "targetPath": "/ro/sali/6",
-      "id": "87fb93a15c6168dcefd8fbfb4be7c064db5173bf"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/unirea_breakfast/",
-      "source": "CRAWL",
-      "targetPath": "/ro/unirea-breakfast",
-      "id": "7c5d73a67203086e2e444b1c6b080755b724e305"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/webcam/",
-      "source": "CRAWL",
-      "targetPath": "/ro/webcam",
-      "id": "ae35d4f1ace9d74061ef3975339513ac356a6462"
+      "targetPath": "/termeni-si-conditii",
+      "id": "9bce5fdf7dd478173d5738c3498e9ab57a34bf50"
     }
   ],
   "crawlOptions": {
@@ -432,320 +168,412 @@
   },
   "extractionErrors": [
     {
-      "url": "https://www.hotelunirea.ro/ro/unirea_spa/",
-      "status": "301 Moved Permanently Redirect: https://shop.unireaspa.ro/"
+      "url": "https://ramispa.ro/?p=141",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/contact/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/unirea_spa/",
-      "status": "301 Moved Permanently Redirect: https://shop.unireaspa.ro/"
+      "url": "https://ramispa.ro/?p=137",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/despre-noi/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/"
+      "url": "https://ramispa.ro/en/?p=1422",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/about-us/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/career",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/career/"
+      "url": "https://ramispa.ro/en/?p=3190",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/bowen-therapy/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/contact_us",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/contact_us/"
+      "url": "https://ramispa.ro/en/?p=1462",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/contact-us/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/cookie_policy",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/cookie_policy/"
+      "url": "https://ramispa.ro/en/?p=1995",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/cookies-policy/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/gallery",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/gallery/"
+      "url": "https://ramispa.ro/en/?p=1953",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/couples-massage/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/"
+      "url": "https://ramispa.ro/en/?p=2843",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/gift-card-rami-spa/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/1",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/1/"
+      "url": "https://ramispa.ro/en/?p=1905",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/massage/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/3",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/3/"
+      "url": "https://ramispa.ro/en/?p=1454",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/photo-gallery/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/4",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/4/"
+      "url": "https://ramispa.ro/en/?p=1997",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/privacy-policy/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/5",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/5/"
+      "url": "https://ramispa.ro/en/?p=2800",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/return-cancellation-policy/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/halls/6",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/halls/6/"
+      "url": "https://ramispa.ro/en/?p=1990",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/en/terms-and-conditions/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/hotel_policy",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/hotel_policy/"
+      "url": "https://ramispa.ro/?p=1075",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/galerie-foto/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/legal_information",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/legal_information/"
+      "url": "https://ramispa.ro/?p=2341",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/gift-card/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/location",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/location/"
+      "url": "https://ramispa.ro/?p=1675",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/masaj-cupluri/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/meetings_i_events",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/meetings_i_events/"
+      "url": "https://ramispa.ro/?p=1673",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/masaj/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/meetings_i_events/5",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/meetings_i_events/5/"
+      "url": "https://ramispa.ro/?p=9",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/politica-cookies/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/meetings_i_events/6",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/meetings_i_events/6/"
+      "url": "https://ramispa.ro/?p=3",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/politica-de-confidentialitate/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/"
+      "url": "https://ramispa.ro/?p=2793",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/politica-de-retur-anulare/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers/corporate_day_pack",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/corporate_day_pack/"
+      "url": "https://ramispa.ro/?p=3121",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/terapia-bowen/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers/full_day_relax",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/full_day_relax/"
+      "url": "https://ramispa.ro/?p=11",
+      "status": "301 Moved Permanently Redirect: https://ramispa.ro/termeni-si-conditii/"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers/happy_birthday",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/happy_birthday/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/108",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers/iasi_traveler_-_city_break",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/iasi_traveler_-_city_break/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1405",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers/lovely_days",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/lovely_days/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/137",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers/relax_package",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/relax_package/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/1673",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers/romantic_package_",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/romantic_package_/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/1675",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/3121",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/offers/vip_package",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/offers/vip_package/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/product/2341",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/privacy_policy",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/privacy_policy/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/1075",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/ristorante_panoramic",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/ristorante_panoramic/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/141",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/rooms",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/rooms/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/11",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/rooms/4",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/rooms/4/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/3",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/rooms/5",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/rooms/5/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/2793",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/unirea_breakfast",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/unirea_breakfast/"
+      "url": "https://ramispa.ro/wp-json/wp/v2/pages/9",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/unirea_spa",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/unirea_spa/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1422",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/webcam",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/en/webcam/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1905",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro//ilab.ro/en",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ilab.ro/en/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1953",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro//ilab.ro/ro",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ilab.ro/ro/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/3190",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/product/2843",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/camere",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/camere/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1454",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/camere/4",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/camere/4/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1462",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/camere/5",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/camere/5/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1990",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/cariera",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/cariera/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1997",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/contacteaza-ne",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/contacteaza-ne/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/2800",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/galerie",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/galerie/"
+      "url": "https://ramispa.ro/en/wp-json/wp/v2/pages/1995",
+      "status": "401 Unauthorized"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/informatii_legale",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/informatii_legale/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/intalniri_si_evenimente/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/5",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/intalniri_si_evenimente/5/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/intalniri_si_evenimente/6",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/intalniri_si_evenimente/6/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/locatie",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/locatie/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/calator_prin_iasi_-_city_break",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/calator_prin_iasi_-_city_break/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/corporate_day_pack",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/corporate_day_pack/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/full_day_relax",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/full_day_relax/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/happy_birthday",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/happy_birthday/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/lovely_days",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/lovely_days/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/relax_package",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/relax_package/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/romantic_package_",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/romantic_package_/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/sejur_familie_27-29_iunie_cu_cazare_gratuita_pentru_copii/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/oferte/vip_package",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/oferte/vip_package/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/politica_cookie-urilor",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/politica_cookie-urilor/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/politica_de_confidentialitate",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/politica_de_confidentialitate/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/regulament_hotelier",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/regulament_hotelier/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/restaurant_panoramic",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/restaurant_panoramic/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/1",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/1/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/3",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/3/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/4",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/4/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/5",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/5/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/sali/6",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/sali/6/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/unirea_breakfast",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/unirea_breakfast/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/unirea_spa",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/unirea_spa/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ro/webcam",
-      "status": "301 Moved Permanently Redirect: https://www.hotelunirea.ro/ro/webcam/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/",
-      "status": "302 Found Redirect: https://www.hotelunirea.ro/ro/"
-    },
-    {
-      "url": "https://www.hotelunirea.ro/ilab.ro/ro/",
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fgift-card%2F",
       "status": "404 Not Found"
     },
     {
-      "url": "https://www.hotelunirea.ro/ro/masuri_de_preventie_protectie_si_siguranta_in_contextul_situatiei_actuale/",
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fgift-card%2F&",
       "status": "404 Not Found"
     },
     {
-      "url": "https://www.hotelunirea.ro/ilab.ro/en/",
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fgift-card-rami-spa%2F",
       "status": "404 Not Found"
     },
     {
-      "url": "https://www.hotelunirea.ro/en/prevention_protection_and_safety_measures_in_the_current_situation__/",
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fgift-card-rami-spa%2F&",
       "status": "404 Not Found"
+    },
+    {
+      "url": "https://ramispa.ro/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/comments/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/comments/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fdespre-noi%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fdespre-noi%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fmasaj%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fmasaj%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fmasaj-cupluri%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fmasaj-cupluri%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fterapia-bowen%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fterapia-bowen%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/gift-card/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fgalerie-foto%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fgalerie-foto%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fcontact%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fcontact%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Ftermeni-si-conditii%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Ftermeni-si-conditii%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-de-confidentialitate%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-de-confidentialitate%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-de-retur-anulare%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-de-retur-anulare%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-cookies%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fpolitica-cookies%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fabout-us%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fabout-us%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fmassage%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fmassage%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcouples-massage%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcouples-massage%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fbowen-therapy%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fbowen-therapy%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/gift-card-rami-spa/feed/",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fphoto-gallery%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fphoto-gallery%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcontact-us%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcontact-us%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fterms-and-conditions%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fterms-and-conditions%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fprivacy-policy%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fprivacy-policy%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Freturn-cancellation-policy%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Freturn-cancellation-policy%2F&",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcookies-policy%2F",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://ramispa.ro/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Framispa.ro%2Fen%2Fcookies-policy%2F&",
+      "status": "content type is not text/html"
     }
   ]
 }
