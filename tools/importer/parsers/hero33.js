@@ -1,33 +1,40 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // 1. Find the grid container with both the image and content
-  const grid = element.querySelector('.grid-layout');
-  if (!grid) return;
+  // Create the header row exactly as specified
+  const headerRow = ['Hero (hero33)'];
 
-  // 2. Get the hero image and content block (assume image is IMG, content is DIV)
-  let heroImg = null;
-  let contentDiv = null;
-  for (const child of Array.from(grid.children)) {
-    if (child.tagName === 'IMG') heroImg = child;
-    else if (child.tagName === 'DIV') contentDiv = child;
+  // Find the .container inside the section
+  const container = element.querySelector('.container');
+  let imgEl = null;
+  let textBlock = null;
+
+  if (container) {
+    // Find the .grid-layout (the layout grid for this block)
+    const grid = container.querySelector('.grid-layout');
+    if (grid) {
+      // The image and text block are both immediate children of .grid-layout
+      const children = Array.from(grid.children);
+      imgEl = children.find(child => child.tagName === 'IMG');
+      textBlock = children.find(child => child !== imgEl);
+    }
   }
 
-  // 3. For the content cell, reference all content inside the contentDiv
-  // This ensures any structure (eyebrow, tag, heading, author/date line) is preserved
-  const contentParts = [];
-  if (contentDiv) {
-    // Push all children of contentDiv (keep their structure)
-    Array.from(contentDiv.children).forEach(el => contentParts.push(el));
-  }
+  // Prepare the image row (row 2)
+  const imageRow = [imgEl ? imgEl : ''];
 
-  // 4. Build table
-  const cells = [
-    ['Hero (hero33)'],                // Header row as required
-    [heroImg ? heroImg : ''],         // Image row
-    [contentParts]                    // Content row (reference original elements)
+  // Prepare the text row (row 3)
+  const textRow = [textBlock ? textBlock : ''];
+
+  // Compose the table data array
+  const tableRows = [
+    headerRow,
+    imageRow,
+    textRow
   ];
 
-  // 5. Replace original element with the table
-  const table = WebImporter.DOMUtils.createTable(cells, document);
+  // Create the table using the helper
+  const table = WebImporter.DOMUtils.createTable(tableRows, document);
+
+  // Replace the original element with our block table
   element.replaceWith(table);
 }

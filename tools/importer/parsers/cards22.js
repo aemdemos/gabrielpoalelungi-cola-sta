@@ -1,43 +1,46 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract the visible/active tab pane
-  const activeTab = element.querySelector('.w-tab-pane.w--tab-active');
-  if (!activeTab) return;
+  // Build rows for table
+  const rows = [];
+  rows.push(['Cards (cards22)']);
 
-  // Find the grid with cards (cards are direct children)
-  const grid = activeTab.querySelector('.w-layout-grid, .grid-layout');
-  if (!grid) return;
-  
-  const headerRow = ['Cards (cards22)'];
-  const rows = [headerRow];
-
-  // Each card is a direct child <a> (or similar) element
-  Array.from(grid.children).forEach(card => {
-    // Find image (if any) -- first <img> in this card
-    const img = card.querySelector('img');
-    
-    // For text content: collect all elements except any image containers
-    // We'll take everything except elements (or wrappers) containing <img>
-    // This ensures we retain all text content and structure (headings, divs, etc)
-    const textFragments = [];
-    Array.from(card.children).forEach(child => {
-      if (!child.querySelector('img') && child.tagName !== 'IMG') {
-        // Check if child has real content
-        if (child.textContent && child.textContent.trim().length > 0) {
-          textFragments.push(child);
-        }
+  // Find all .w-tab-pane (panes)
+  const panes = element.querySelectorAll('.w-tab-pane');
+  panes.forEach((pane) => {
+    const grid = pane.querySelector('.w-layout-grid');
+    if (!grid) return;
+    // Each card is an <a> direct child of the grid
+    const cards = grid.querySelectorAll('a');
+    cards.forEach((card) => {
+      // IMAGE: Try for .utility-aspect-3x2 > img, else ''
+      let img = null;
+      const aspectDiv = card.querySelector('.utility-aspect-3x2');
+      if (aspectDiv) {
+        img = aspectDiv.querySelector('img');
       }
+      // If no image, cell is empty string
+      let imgCell = img ? img : '';
+
+      // TEXT: Heading (h3), then paragraph (div.paragraph-sm)
+      let heading = card.querySelector('h3, .h4-heading');
+      let desc = card.querySelector('.paragraph-sm');
+      // Compose as fragment (existing elements), skip nulls
+      const cellContent = [];
+      if (heading) cellContent.push(heading);
+      if (desc) cellContent.push(desc);
+
+      // Support for extra CTA link (not present in sample, but in spec)
+      // Only grabs direct descendants to avoid duplication
+      let cta = Array.from(card.children).find(el => el.classList && (el.classList.contains('button') || el.classList.contains('cta-link') || el.classList.contains('btn') || el.classList.contains('link')));
+      if (cta) cellContent.push(cta);
+
+      // If nothing, cell is empty
+      let textCell = cellContent.length ? cellContent : '';
+      rows.push([imgCell, textCell]);
     });
-    // If we have no text fragments, fallback to card.textContent
-    let textCell = '';
-    if (textFragments.length > 0) {
-      textCell = textFragments.length === 1 ? textFragments[0] : textFragments;
-    } else {
-      textCell = card.textContent.trim();
-    }
-    rows.push([img || '', textCell]);
   });
 
+  // Create and replace
   const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

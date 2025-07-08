@@ -1,47 +1,43 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Block header row as in the example
-  const headerRow = ['Hero (hero13)'];
+  // --- Header row
+  const header = ['Hero (hero13)'];
 
-  // --- 2nd row: Background image (optional) ---
-  // Find the main background image: it's a .cover-image that is directly inside the first .w-layout-grid > div
-  // Avoid the nested grid/card images
-  let bgImg = null;
-  const grid = element.querySelector('.w-layout-grid');
-  if (grid) {
-    // Find first direct child div of grid that contains an img.cover-image
-    const gridDivs = grid.querySelectorAll(':scope > div');
-    for (const div of gridDivs) {
-      const img = div.querySelector(':scope > img.cover-image');
-      // Exclude cover-images that are also .utility-aspect-1x1 (that is card image)
-      if (img && !img.classList.contains('utility-aspect-1x1')) {
-        bgImg = img;
-        break;
-      }
+  // --- Row 2: Background Image
+  // The background image is the absolute-positioned image
+  let bgImg = element.querySelector('img.cover-image.utility-position-absolute');
+  if (!bgImg) {
+    // Fallback to first image if absolute not found
+    bgImg = element.querySelector('img');
+  }
+  
+  // --- Row 3: Main Content (headline, subheading, cta, etc.)
+  // This is all the content inside the card
+  // It is nested under .container > .card
+  let mainContent = null;
+  const container = element.querySelector('.container');
+  if (container) {
+    const card = container.querySelector('.card');
+    if (card) {
+      mainContent = card;
+    } else {
+      mainContent = container;
     }
   }
 
-  // --- 3rd row: Content (headline, etc.) ---
-  // Find the card body which contains heading, list, button, etc
-  let cardBody = null;
-  const card = element.querySelector('.card');
-  if (card) {
-    cardBody = card.querySelector('.card-body');
+  // Edge case: if none found, fallback to the main element
+  if (!mainContent) {
+    mainContent = element;
   }
 
-  // Fallback: if cardBody is not found, just use the main container
-  if (!cardBody) {
-    const containers = element.querySelectorAll('.container');
-    cardBody = containers[containers.length - 1] || element;
-  }
-
-  // Prepare the cells according to block spec: 1 col, 3 rows (header, bg, content)
-  const cells = [
-    headerRow,
+  // --- Build the rows array
+  const rows = [
+    header,
     [bgImg || ''],
-    [cardBody || '']
+    [mainContent]
   ];
 
-  const table = WebImporter.DOMUtils.createTable(cells, document);
+  // --- Create and insert the table
+  const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

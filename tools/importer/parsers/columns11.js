@@ -1,25 +1,25 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // 1. Find the grid containing the columns
+  // Find the grid container which holds columns
   const grid = element.querySelector('.w-layout-grid');
   if (!grid) return;
 
-  // 2. Get all direct children of the grid (each is a column)
+  // Get immediate children of grid, which are the columns
   const columns = Array.from(grid.children);
-  if (columns.length === 0) return;
+  if (!columns.length) return;
 
-  // 3. Build the header row (must be a single cell array)
+  // Table header as in the example: exactly one cell
   const headerRow = ['Columns (columns11)'];
 
-  // 4. Build the columns row: each cell is the referenced column element
-  const columnsRow = columns;
+  // Content row: as many cells as columns found in the grid
+  const contentRow = columns;
 
-  // 5. Create the table as per the required structure: one header cell, then N columns
+  // Create the block table, header row is a single column, content row as many columns as needed
   const table = WebImporter.DOMUtils.createTable([
-    headerRow,     // This will create a single <th> spanning all columns
-    columnsRow     // This will create as many <td> as columns
+    headerRow,
+    contentRow
   ], document);
 
-  // 6. Replace the original element with the new block table
+  // Replace the original element with the new block table
   element.replaceWith(table);
 }

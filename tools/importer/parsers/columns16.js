@@ -1,36 +1,35 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Identify main content columns from the first grid
-  const mainGrid = element.querySelector('.grid-layout.tablet-1-column');
-  let col1 = null;
-  let col2 = null;
-  if (mainGrid) {
-    const cols = mainGrid.querySelectorAll(':scope > div');
-    if (cols.length >= 2) {
-      col1 = cols[0];
-      col2 = cols[1];
-    }
-  }
+  // 1. Table header row
+  const headerRow = ['Columns (columns16)'];
 
-  // Identify the two image columns from the image grid
-  const imageGrid = element.querySelector('.grid-layout.mobile-portrait-1-column');
-  let img1 = null;
-  let img2 = null;
-  if (imageGrid) {
-    const imgDivs = imageGrid.querySelectorAll(':scope > div');
-    if (imgDivs.length >= 2) {
-      img1 = imgDivs[0];
-      img2 = imgDivs[1];
-    }
-  }
+  // 2. Get the main columns grid (two columns: title/eyebrow and summary/author/cta)
+  const sectionContainer = element.querySelector(':scope > .container');
+  if (!sectionContainer) return;
+  const topGrid = sectionContainer.querySelector(':scope > .w-layout-grid.grid-layout.tablet-1-column');
+  if (!topGrid) return;
 
-  // Prepare table: Header is a single-column row, then rows with two columns
-  const cells = [
-    ['Columns (columns16)'],
-    [col1, col2],
-    [img1, img2],
+  // Get the two columns in the top grid
+  const topGridCols = topGrid.querySelectorAll(':scope > div');
+  if (topGridCols.length < 2) return;
+  const leftCol = topGridCols[0]; // eyebrow + h1
+  const rightCol = topGridCols[1]; // summary, author, button
+
+  // 3. Get the images grid (two columns of images)
+  const imageGrid = sectionContainer.querySelector('.w-layout-grid.grid-layout.mobile-portrait-1-column');
+  if (!imageGrid) return;
+  const imageCells = Array.from(imageGrid.querySelectorAll(':scope > div'));
+  // Defensive: only take first two images in case of extra
+  const imagesRow = imageCells.slice(0, 2);
+
+  // 4. Build the block table
+  const rows = [
+    headerRow,
+    [leftCol, rightCol],
+    imagesRow
   ];
+  const block = WebImporter.DOMUtils.createTable(rows, document);
 
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(table);
+  // 5. Replace the original element
+  element.replaceWith(block);
 }

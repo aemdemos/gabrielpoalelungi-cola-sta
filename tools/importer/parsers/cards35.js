@@ -1,24 +1,19 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Prepare header as in example
+  // Header row as required by spec
   const headerRow = ['Cards (cards35)'];
-
-  // In this HTML, each card is a .utility-aspect-1x1 containing an img.
+  // Each card is a div.utility-aspect-1x1 containing an image only.
+  // To structurally match the example (always two columns: image, text),
+  // we must always produce two columns, the second cell being empty if there's no text.
   const cards = Array.from(element.querySelectorAll(':scope > .utility-aspect-1x1'));
-
-  // Each row: [image, empty string for text col]
   const rows = cards.map(card => {
     const img = card.querySelector('img');
-    // Defensive: If no image, leave cell empty
-    return [img || '', ''];
+    // Always two columns: first is image, second is empty (since no text present)
+    return [img, ''];
   });
-
-  // Construct table
   const table = WebImporter.DOMUtils.createTable([
     headerRow,
     ...rows
   ], document);
-
-  // Replace the original element
   element.replaceWith(table);
 }

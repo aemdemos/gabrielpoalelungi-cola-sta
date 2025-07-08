@@ -1,64 +1,29 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // The block structure is:
-  // 1. Header row: ["Hero (hero29)"]
-  // 2. Row: [image] (decorative image)
-  // 3. Row: [content: heading, subhead, paragraph, cta)
-
-  // Get the main container with the grid layout
-  const grid = element.querySelector('.grid-layout');
-
-  let imageEl = null;
-  let contentEl = null;
-
-  if (grid) {
-    // Get all direct children of the grid layout
-    const children = Array.from(grid.children);
-    for (const child of children) {
-      if (!imageEl && child.querySelector('img')) {
-        imageEl = child.querySelector('img');
-      } else if (!contentEl && (child.querySelector('h1, h2, h3, p, a, .eyebrow'))) {
-        contentEl = child;
-      }
-    }
-  }
-
-  // Fallbacks if not found
-  if (!imageEl) {
-    imageEl = element.querySelector('img');
-  }
-  if (!contentEl) {
-    contentEl = element.querySelector('div');
-  }
-
-  // 1. Header row
+  // Header row
   const headerRow = ['Hero (hero29)'];
 
-  // 2. Image row
-  const imageRow = [imageEl ? imageEl : ''];
+  // Find the main grid container, which has text and image as children
+  const grid = element.querySelector('.w-layout-grid');
+  if (!grid) return;
+  const gridChildren = Array.from(grid.children);
 
-  // 3. Content row
-  // Collect ONLY direct children of contentEl, in their original order
-  let contentCell = [];
-  if (contentEl) {
-    // Filter out empty text nodes
-    contentCell = Array.from(contentEl.childNodes).filter(node => {
-      return (
-        node.nodeType === 1 ||
-        (node.nodeType === 3 && node.textContent && node.textContent.trim() !== '')
-      );
-    });
-  } else {
-    contentCell = [''];
-  }
+  // Find the image element (assume first img in grid children)
+  const imgEl = grid.querySelector('img');
+  // Find the text content div (assume first non-img child)
+  const textDiv = gridChildren.find(child => child !== imgEl);
 
-  // Build the table
-  const cells = [
+  // 2nd row: image (as a cell, or empty string if missing)
+  const imageRow = [imgEl || ''];
+
+  // 3rd row: text content (referencing the original element directly, or empty if missing)
+  const contentRow = [textDiv || ''];
+
+  const rows = [
     headerRow,
     imageRow,
-    [contentCell]
+    contentRow,
   ];
-
-  const table = WebImporter.DOMUtils.createTable(cells, document);
+  const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

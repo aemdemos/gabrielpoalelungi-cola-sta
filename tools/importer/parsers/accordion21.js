@@ -1,28 +1,35 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Compose block table header
+  // Header row as per requirements
   const headerRow = ['Accordion (accordion21)'];
-  const rows = [headerRow];
 
-  // Each accordion item is inside a .divider (direct children of element)
-  const dividers = element.querySelectorAll(':scope > .divider');
-
-  dividers.forEach((divider) => {
-    // The structure for each item should be:
-    //   .w-layout-grid > [0]=title(.h4-heading), [1]=content(.rich-text)
-    const grid = divider.querySelector(':scope > .w-layout-grid');
-    if (!grid || grid.children.length < 2) return;
-    const title = grid.children[0];
-    const content = grid.children[1];
-    // Only push if both elements exist
-    if (title && content) {
-      rows.push([title, content]);
+  // Gather all immediate child .divider elements (each is an accordion item)
+  const accordionRows = [];
+  const items = element.querySelectorAll(':scope > .divider');
+  items.forEach((item) => {
+    // Expecting structure: .divider > .w-layout-grid.grid-layout > [title, content]
+    const grid = item.querySelector(':scope > .grid-layout');
+    if (grid) {
+      const gridChildren = grid.querySelectorAll(':scope > *');
+      // Defensive checks in case of missing children
+      if (gridChildren.length >= 2) {
+        const title = gridChildren[0];
+        const content = gridChildren[1];
+        // Reference the actual elements, not their clones or HTML
+        accordionRows.push([title, content]);
+      }
     }
   });
 
-  // Replace only if rows found besides header
-  if (rows.length > 1) {
-    const table = WebImporter.DOMUtils.createTable(rows, document);
+  // Only create the table if there is at least one item
+  if (accordionRows.length > 0) {
+    const table = WebImporter.DOMUtils.createTable([
+      headerRow,
+      ...accordionRows
+    ], document);
     element.replaceWith(table);
+  } else {
+    // Optionally, remove the element if empty (no accordion items found)
+    element.remove();
   }
 }

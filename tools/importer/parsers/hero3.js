@@ -1,47 +1,52 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // The block header as per example and block definition
+  // Header row for the block
   const headerRow = ['Hero (hero3)'];
 
-  // No background image present in this HTML
-  const bgRow = [''];
+  // Row 2 - Background Image (optional, not present)
+  const backgroundRow = [''];
 
-  // Find the .grid-layout inside the section
-  const grid = element.querySelector('.grid-layout');
-  let contentCell;
+  // Row 3 - Title, Subheading, CTA
+  // Find the grid container which holds the main content
+  const grid = element.querySelector('.w-layout-grid');
+
+  // Defensive: in case the grid is not present
+  let contentRow = [''];
   if (grid) {
-    // grid > two columns: 1st = heading/subheading, 2nd = buttons
-    const gridChildren = grid.querySelectorAll(':scope > div');
-    const contentArr = [];
-    if (gridChildren.length >= 1) {
-      const textCol = gridChildren[0];
-      // Add all children of textCol (headings, paragraphs)
-      textCol.childNodes.forEach((node) => {
-        // Only append non-empty nodes
-        if (node.nodeType === Node.ELEMENT_NODE || (node.nodeType === Node.TEXT_NODE && node.textContent.trim())) {
-          contentArr.push(node);
-        }
-      });
+    // Get all immediate children of the grid
+    const gridChildren = Array.from(grid.children);
+    // Typically: [text content, button group]
+    const contentFragments = [];
+
+    // Find heading and subheading in the first cell
+    const textCell = gridChildren[0];
+    if (textCell) {
+      // Extract all headings and subheadings (preserve element structure)
+      const h2 = textCell.querySelector('h2');
+      if (h2) contentFragments.push(h2);
+      const subheading = textCell.querySelector('p');
+      if (subheading) contentFragments.push(subheading);
     }
-    if (gridChildren.length >= 2) {
-      const ctaCol = gridChildren[1];
-      // Add all CTAs (buttons/links)
-      ctaCol.childNodes.forEach((node) => {
-        if (node.nodeType === Node.ELEMENT_NODE) {
-          contentArr.push(node);
-        }
-      });
+
+    // Find CTAs in the second cell
+    const ctaCell = gridChildren[1];
+    if (ctaCell) {
+      // Buttons/links (keep as elements)
+      const buttons = Array.from(ctaCell.querySelectorAll('a'));
+      if (buttons.length) {
+        contentFragments.push(...buttons);
+      }
     }
-    contentCell = [contentArr];
-  } else {
-    // fallback: use the element directly
-    contentCell = [element];
+    contentRow = [contentFragments];
   }
 
-  const table = WebImporter.DOMUtils.createTable([
+  // Compose table data
+  const cells = [
     headerRow,
-    bgRow,
-    contentCell
-  ], document);
+    backgroundRow,
+    contentRow
+  ];
+
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

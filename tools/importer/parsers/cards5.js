@@ -1,43 +1,34 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Table header as per instructions
+  // Table header matches exactly the block name from markdown
   const headerRow = ['Cards (cards5)'];
-  // Gather all card elements (direct children)
-  const cardLinks = element.querySelectorAll(':scope > a.card-link');
   const rows = [headerRow];
 
-  cardLinks.forEach(card => {
-    // --- Image cell ---
-    // Per pattern, use the outer image wrapper div (contains the <img>)
-    const imageWrapper = card.querySelector('.utility-aspect-3x2');
-    // Defensive: fallback to the img if wrapper is missing
-    let imgCell = null;
-    if (imageWrapper) {
-      imgCell = imageWrapper;
-    } else {
-      const img = card.querySelector('img');
-      if (img) imgCell = img;
+  // Get all cards (direct children <a> elements)
+  const cardLinks = element.querySelectorAll(':scope > a.card-link');
+  cardLinks.forEach((card) => {
+    // -----------------
+    // FIRST CELL: Image
+    // -----------------
+    // Find the first <img> in the card for the image cell. If missing, put null.
+    let imageEl = null;
+    const imgWrapper = card.querySelector('.utility-aspect-3x2');
+    if (imgWrapper) {
+      imageEl = imgWrapper.querySelector('img');
     }
-
-    // --- Text cell ---
-    // Compose the text cell from tag, heading, description, preserving order and markup
-    const textWrapper = card.querySelector('.utility-padding-all-1rem');
-    const cellContent = [];
-    if (textWrapper) {
-      // Tag (optional, uppercased small text)
-      const tag = textWrapper.querySelector('.tag');
-      if (tag) cellContent.push(tag);
-      // Heading (optional)
-      const heading = textWrapper.querySelector('h1, h2, h3, h4, h5, h6, .h4-heading');
-      if (heading) cellContent.push(heading);
-      // Description (optional)
-      const desc = textWrapper.querySelector('p');
-      if (desc) cellContent.push(desc);
-    }
-    rows.push([imgCell, cellContent]);
+    // ---------------
+    // SECOND CELL: Text content
+    // ---------------
+    // Use the text content container (includes tag, heading, and paragraph)
+    const textContent = card.querySelector('.utility-padding-all-1rem');
+    // If missing, handle gracefully
+    // Structure a row for this card
+    rows.push([
+      imageEl || '',
+      textContent || ''
+    ]);
   });
-
-  // Create and replace
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(table);
+  // Create the table and replace the original element
+  const block = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(block);
 }

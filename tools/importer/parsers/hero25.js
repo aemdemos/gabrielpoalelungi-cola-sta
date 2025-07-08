@@ -1,50 +1,40 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row
+  // 1. Header row, exactly as block name
   const headerRow = ['Hero (hero25)'];
 
-  // Find the main grid (the one with both content and image)
-  const mainGrid = element.querySelector('.w-layout-grid.grid-layout.tablet-1-column');
+  // 2. Extract the image (background/decorative image)
+  // Find the first img anywhere in the section, reference it directly
+  const image = element.querySelector('img');
 
-  // Defensive: If grid not found, do nothing
-  if (!mainGrid) return;
-
-  // Find image (background/hero image)
-  let imageEl = null;
-  // Find content (headline, paragraph, CTAs)
-  let contentEl = null;
-  // The grid may contain containers that hold the content or image directly
-  for (const child of Array.from(mainGrid.children)) {
-    if (child.tagName.toLowerCase() === 'img') {
-      imageEl = child;
-    } else if (
-      child.querySelector('h1, h2, h3, h4, h5, h6, .rich-text, .button-group, p')
-    ) {
-      contentEl = child.querySelector('h1, h2, h3, h4, h5, h6, .rich-text, .button-group, p').parentElement;
+  // 3. Extract the content block (title, paragraph, CTA)
+  // Find the innermost grid or section containing the h2 (title)
+  let textBlock = null;
+  // Find all possible grids
+  const grids = element.querySelectorAll(':scope .w-layout-grid');
+  for (const grid of grids) {
+    if (grid.querySelector('h2')) {
+      // The section div inside this grid contains the text + buttons
+      textBlock = grid.querySelector('div.section');
+      if (textBlock) break;
     }
   }
-
-  // 2nd row: image
-  const imageRow = [imageEl || ''];
-
-  // 3rd row: content (headline, subheading, CTAs, in order)
-  let contentParts = [];
-  if (contentEl) {
-    // Headline (heading)
-    const heading = contentEl.querySelector('h1, h2, h3, h4, h5, h6');
-    if (heading) contentParts.push(heading);
-    // Subheading/Paragraph
-    const rich = contentEl.querySelector('.rich-text, .paragraph-lg');
-    if (rich) contentParts.push(rich);
-    // CTA Buttons
-    const buttonGroup = contentEl.querySelector('.button-group');
-    if (buttonGroup) contentParts.push(buttonGroup);
+  // Fallback: if not found, try direct child section
+  if (!textBlock) {
+    textBlock = element.querySelector('div.section');
   }
-  const contentRow = [contentParts.length > 0 ? contentParts : ''];
 
-  // Compose table
-  const cells = [headerRow, imageRow, contentRow];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
+  // Defensive: If image or textBlock is missing, still create the structure, but leave cell empty
+  const imageCell = image ? [image] : [''];
+  const textCell = textBlock ? [textBlock] : [''];
 
+  // 4. Compose the table rows as in block specification: header, image, then text/CTA
+  const rows = [
+    headerRow,
+    imageCell,
+    textCell
+  ];
+  // 5. Create and replace the element
+  const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

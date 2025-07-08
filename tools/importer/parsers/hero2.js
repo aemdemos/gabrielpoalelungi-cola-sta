@@ -1,48 +1,39 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the container with the grid layout
-  const container = element.querySelector('.container') || element;
-  const grid = container.querySelector('.grid-layout') || container;
-  const children = Array.from(grid.children);
-  // Get the image (first img child)
-  const img = children.find((child) => child.tagName === 'IMG');
-  // Get the content block (the non-image child)
-  const contentBlock = children.find((child) => child !== img);
+  // Header row as specified
+  const headerRow = ['Hero (hero2)'];
 
-  // Collect content elements from the content block
-  const contentElements = [];
-  if (contentBlock) {
-    // Headings (in any order, keep their natural order)
-    const headingElements = Array.from(contentBlock.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-    headingElements.forEach(el => contentElements.push(el));
-    // Subheading or paragraph (in this HTML, it's a p.subheading)
-    const subHeadings = Array.from(contentBlock.querySelectorAll('p, .subheading'));
-    // Avoid duplicates: add paragraphs if not already included
-    subHeadings.forEach(el => {
-      if (!contentElements.includes(el)) contentElements.push(el);
-    });
-    // Button group, if present
-    const buttonGroup = contentBlock.querySelector('.button-group');
-    if (buttonGroup) {
-      contentElements.push(buttonGroup);
-    } else {
-      // Or standalone links under contentBlock
-      const links = Array.from(contentBlock.querySelectorAll('a'));
-      links.forEach(link => {
-        // Only add if not already in contentElements
-        if (!contentElements.includes(link)) contentElements.push(link);
-      });
+  // Get the grid layout (should contain both image and content)
+  const grid = element.querySelector('.grid-layout');
+
+  // Row 2: Image (background/feature image)
+  let imgCell = [''];
+  if (grid) {
+    const img = grid.querySelector('img');
+    if (img) {
+      imgCell = [img];
     }
   }
 
-  // Construct table rows
-  const rows = [
-    ['Hero (hero2)'], // Header row, matches exactly the block name
-    [img || ''],      // Image row, or empty if missing
-    [contentElements] // Content row, list of all content elements in order
-  ];
+  // Row 3: Title, Subheading, CTA (all text content)
+  let contentCell = [''];
+  if (grid) {
+    // Find the div containing heading/content
+    // It's the immediate child div that is not the image
+    const children = Array.from(grid.children);
+    // Find the first <div> that isn't the <img>
+    const contentDiv = children.find(el => el.tagName === 'DIV');
+    if (contentDiv) {
+      contentCell = [contentDiv];
+    }
+  }
 
-  // Create the table and replace the original element
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  // Compose block table
+  const cells = [
+    headerRow,
+    imgCell,
+    contentCell
+  ];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

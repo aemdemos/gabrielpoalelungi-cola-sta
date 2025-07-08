@@ -1,49 +1,37 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Ensure we have the correct wrapper for extraction
-  const grid = element.querySelector('.w-layout-grid') || element;
-  const children = Array.from(grid.children);
-
-  // Find content pieces
-  let title = null;
-  let tags = null;
-  let description = null;
-
-  children.forEach(child => {
-    if (!title && /^H[1-6]$/.test(child.tagName)) {
-      title = child;
-    }
-    // tags: find cluster of .tag elements (could be in a container)
-    if (!tags && child.querySelectorAll && child.querySelectorAll('.tag').length > 0) {
-      tags = child;
-    }
-    // description: rich text paragraphs
-    if (!description && child.querySelector && child.querySelector('.rich-text')) {
-      description = child.querySelector('.rich-text');
-    }
-  });
-
-  // Compose main cell content, including author-label if present
-  // (first element is likely the author name, e.g. 'Taylor Brooks')
-  const mainCellContent = [];
-  // If the first child is plain text, include it
-  if (children.length && children[0].classList && children[0].classList.contains('paragraph-xl')) {
-    mainCellContent.push(children[0]);
-  }
-  if (tags) mainCellContent.push(tags);
-  if (title) mainCellContent.push(title);
-  if (description) mainCellContent.push(description);
-
-  // Table with exactly 3 rows, 1 column per the specification
+  // Table header as required (exactly matches the block name)
   const headerRow = ['Hero (hero31)'];
-  const backgroundRow = ['']; // No background image
-  const contentRow = [mainCellContent];
 
-  const table = WebImporter.DOMUtils.createTable([
+  // This example has no background image, so provide empty cell for row 2
+  const bgImageRow = [''];
+
+  // Extract the main content container (grid)
+  const grid = element.querySelector('.grid-layout');
+  if (!grid) return;
+
+  // The content for the third row is the main heading and the rich text block
+  // Get heading (h2.h1-heading)
+  const heading = grid.querySelector('h2.h1-heading');
+  // Get the description paragraphs (rich text, all p's inside)
+  const richText = grid.querySelector('.rich-text');
+
+  // Compose content array for the cell
+  const cellContent = [];
+  if (heading) cellContent.push(heading);
+  if (richText) cellContent.push(richText);
+  if (cellContent.length === 0) cellContent.push('');
+
+  const contentRow = [cellContent];
+
+  // Compose the table data
+  const cells = [
     headerRow,
-    backgroundRow,
+    bgImageRow,
     contentRow
-  ], document);
+  ];
 
+  // Create and replace the table
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

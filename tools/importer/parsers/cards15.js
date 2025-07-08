@@ -1,31 +1,43 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find all card anchors
-  const cardElements = Array.from(element.querySelectorAll(':scope > a'));
+  // Build header row as in the example (with exact casing)
+  const headerRow = ['Cards (cards15)'];
+  const cells = [headerRow];
 
-  // Build the rows for each card: [imageCell, textCell]
-  const rows = cardElements.map((card) => {
-    // Image cell: wrapper div with image
-    const imgCell = card.querySelector('.utility-aspect-2x3');
-    // Text cell: tag/date group + heading
-    const metaDiv = card.querySelector('.flex-horizontal');
+  // Find all direct children <a> (each card)
+  const cardLinks = Array.from(element.querySelectorAll(':scope > a'));
+  cardLinks.forEach((card) => {
+    // Left cell: image element (mandatory)
+    let imageEl = null;
+    const aspectBox = card.querySelector(':scope > .utility-aspect-2x3');
+    if (aspectBox) {
+      const img = aspectBox.querySelector('img');
+      if (img) imageEl = img;
+    }
+
+    // Right cell: group tag(s), date, title (in order)
+    const content = [];
+    // Tag and date (usually inside a flex row)
+    const tagRow = card.querySelector(':scope > .flex-horizontal');
+    if (tagRow) {
+      // Tag
+      const tag = tagRow.querySelector('.tag');
+      if (tag) content.push(tag);
+      // Date
+      const date = tagRow.querySelector('.paragraph-sm');
+      if (date) content.push(date);
+    }
+    // Heading as title (mandatory)
     const heading = card.querySelector('h3, .h4-heading');
-    const textCell = [];
-    if (metaDiv) textCell.push(metaDiv);
-    if (heading) textCell.push(heading);
-    return [imgCell, textCell];
+    if (heading) content.push(heading);
+
+    // Only add row if image and at least one text element (to avoid empty rows)
+    if (imageEl && content.length) {
+      cells.push([imageEl, content]);
+    }
   });
 
-  // The header row must have a single cell spanning 2 columns
-  // WebImporter.DOMUtils.createTable does not expose colspan directly, so we will create the table and set colspan manually
-  const cells = [['Cards (cards15)'], ...rows];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Set header cell to span 2 columns if there is at least one row with 2 columns
-  const th = table.querySelector('th');
-  if (th && rows.length > 0 && rows[0].length === 2) {
-    th.setAttribute('colspan', '2');
-  }
-
-  element.replaceWith(table);
+  // Create block table and replace original element
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }
