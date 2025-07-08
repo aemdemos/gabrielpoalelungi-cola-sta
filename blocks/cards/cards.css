@@ -44,7 +44,6 @@
 /* .cards.cards15 rules placed before .cards.cards5/.cards.cards4 for specificity */
 
 /* ------------------------------------------------------------------ */
-
 .cards.cards15 {
   background: #fff;
   padding: 40px 0;
@@ -136,6 +135,137 @@
 /* End .cards.cards15 block                                           */
 
 /* ------------------------------------------------------------------ */
+.cards.cards5 .cards-card-body {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+.cards.cards5 .cards-card-body p:first-child {
+  align-self: flex-start;
+  background: #F0F0F0;
+  color: #5A5A5A;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-radius: 11px;
+  padding: 3px 8px;
+  margin: 0 0 4px;
+  display: inline-block;
+}
+
+.cards.cards5 .cards-card-body p:last-child {
+  font-size: 15px;
+  color: #6F6F6F;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.32;
+  flex: 1 1 auto;
+}
+
+.cards.cards20 {
+  max-width: 1020px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 0;
+}
+
+.cards.cards20 > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 18px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards.cards20 > ul > li > .cards-card-body {
+  margin: 0;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.cards.cards20 > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex: 0 0 calc(25% - 18px);
+  max-width: calc(25% - 18px);
+  min-width: 170px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.cards.cards20 > ul > li > .cards-card-body:first-child {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  padding: 0;
+  border-radius: 50%;
+  border: 1.5px solid #222;
+  box-sizing: border-box;
+}
+
+.cards.cards20 > ul > li > .cards-card-body:last-child {
+  flex: 1 1 0%;
+  display: flex;
+  align-items: flex-start;
+  background: none;
+  padding: 0;
+  min-width: 0;
+}
+
+.cards.cards20 > ul > li > .cards-card-body:last-child p {
+  margin: 0;
+  padding: 0;
+  color: #222;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+  font-weight: 400;
+  text-align: left;
+  background: none;
+  overflow-wrap: break-word; /* instead of deprecated word-break: break-word */
+}
+
+/* Responsive: 2 columns, then 1 column */
+@media (width <= 900px) {
+  .cards.cards20 {
+    max-width: 98vw;
+  }
+
+  .cards.cards20 > ul > li {
+    flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+}
+
+@media (width <= 600px) {
+  .cards.cards20 > ul {
+    gap: 14px 0;
+  }
+
+  .cards.cards20 > ul > li {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 
 /* Grid: tighter vertical row gap for more compact stack */
 .cards.cards5 > ul {
@@ -194,31 +324,6 @@
   border-top-right-radius: 20px;
 }
 
-/* Card body: tighter padding and less gap */
-.cards.cards5 .cards-card-body {
-  padding: 10px 12px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1 1 auto;
-  box-sizing: border-box;
-}
-
-/* Tag/label pill: even more compact */
-.cards.cards5 .cards-card-body p:first-child {
-  align-self: flex-start;
-  background: #F0F0F0;
-  color: #5A5A5A;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  border-radius: 11px;
-  padding: 3px 8px;
-  margin: 0 0 4px;
-  display: inline-block;
-}
-
 /* Headline: compact margin, slightly tighter line spacing */
 .cards.cards5 .cards-card-body h3 {
   font-family: var(--heading-font-family);
@@ -231,16 +336,6 @@
   letter-spacing: -0.5px;
   overflow-wrap: break-word;
   flex-shrink: 0;
-}
-
-/* Description: reduced line-height */
-.cards.cards5 .cards-card-body p:last-child {
-  font-size: 15px;
-  color: #6F6F6F;
-  font-weight: 400;
-  margin: 0;
-  line-height: 1.32;
-  flex: 1 1 auto;
 }
 
 /* Responsive: two columns on tablet, one on mobile */
