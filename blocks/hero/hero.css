@@ -1,6 +1,7 @@
 
 
 
+
 /* --- Hero Container --- */
 .hero-container .hero-wrapper {
   max-width: unset;
@@ -961,7 +962,7 @@
     text-align: center;
   }
 
-  .hero.hero13 > div:last-child > div > p:first-child + div > p:not(.button-container) {
+  .hero.hero13 > div:last-child > div > p:not(.button-container) {
     font-size: 0.98rem;
     padding-bottom: 0.31em;
     text-align: center;
@@ -969,144 +970,197 @@
 }
 
 /* --- START MERGED SELECTOR --- */
-.hero.hero31 {
+.hero.hero33 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  background: #fff;
-  box-sizing: border-box;
-}
-
-.hero.hero31 > div:first-child {
-  flex: 0 0 60vw;
-  min-width: 540px;
-  max-width: 900px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0;
-}
-
-.hero.hero31 > div:last-child {
-  flex: 1 1 0;
-  min-width: 260px;
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  height: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0;
+  gap: 2.5rem;
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.hero.hero31 > div:last-child > div {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-.hero.hero31 h2 {
-  font-family: 'Montserrat Alternates', Montserrat, var(--heading-font-family, "Syncopate", sans-serif);
-  font-size: 4.5vw;
-  min-font-size: 50px;
-  max-font-size: 92px;
-  font-weight: 400;
-  line-height: 0.92;
-  color: #111;
-  margin: 0 0 38px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  word-break: break-word;
-  padding: 0;
-}
-
-.hero.hero31 p {
-  font-size: 15.5px;
-  color: #444;
-  line-height: 1.57;
-  margin: 0 0 10px;
-  max-width: 390px;
-  text-align: left;
-  font-family: var(--body-font-family, "Instrument Sans", sans-serif);
-  font-weight: 400;
-}
-
-@media (width <= 1200px) {
-  .hero.hero31 > div:first-child {
-    min-width: 100px;
-    max-width: 170px;
-    flex-basis: 15vw;
-  }
-
-  .hero.hero31 > div:last-child {
-    max-width: 100vw;
-    min-width: 0;
-  }
-
-  .hero.hero31 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 24px;
-  }
-}
-
-@media (width <= 900px) {
-  .hero.hero31 {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    min-height: unset;
-    padding: 0 0 20px;
-  }
-
-  .hero.hero31 > div:first-child {
-    display: none;
-  }
-
-  .hero.hero31 > div:last-child {
-    max-width: 100vw;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0;
-  }
-
-  .hero.hero31 > div:last-child > div {
-    align-items: center;
-    width: 100%;
-    max-width: 98vw;
-  }
-
-  .hero.hero31 h2,
-  .hero.hero31 p {
-    text-align: center;
-    max-width: 98vw;
-  }
-
-  .hero.hero31 h2 {
-    font-size: 2.1rem;
-    margin-bottom: 14px;
-    line-height: 1.08;
-  }
-
-  .hero.hero31 p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
+  min-height: 400px;
 }
 
 /* --- END MERGED SELECTOR --- */
 
 /* Generated CSS: everything else unchanged except for the merged selector above */
+
+.hero.hero33 > div:first-child {
+  flex: 0 0 430px;
+  max-width: 430px;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.hero.hero33 > div:first-child > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.hero.hero33 > div:first-child picture,
+.hero.hero33 > div:first-child img {
+  display: block;
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 4/3;
+  min-height: 280px;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgb(40 40 40 / 9%);
+  object-fit: cover;
+  background: #eee;
+  margin: 0;
+  height: auto;
+}
+
+/* --- TEXT COLUMN --- */
+.hero.hero33 > div:last-child {
+  flex: 1 1 0;
+  min-width: 340px;
+  max-width: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.hero.hero33 > div:last-child > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+/* --- LABEL AND BADGE ON SAME LINE (simulate flex row for first two <p>s) --- */
+.hero.hero33 > div:last-child > div {
+  position: relative;
+}
+
+.hero.hero33 > div:last-child > div > p:first-child,
+.hero.hero33 > div:last-child > div > p:nth-child(2) {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.18rem;
+}
+
+.hero.hero33 > div:last-child > div > p:first-child {
+  font-size: 0.97rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  margin-right: 0.7rem;
+}
+
+.hero.hero33 > div:last-child > div > p:nth-child(2) {
+  font-size: 0.93rem;
+  color: #444;
+  background: #f0f0f0;
+  border-radius: 999px;
+  padding: 0.18em 1.25em;
+  font-weight: 500;
+  position: relative;
+  top: -2px;
+  margin-right: 0;
+}
+
+/* --- HEADLINE --- */
+.hero.hero33 h2 {
+  font-family: Syncopate, Orbitron, Arial, sans-serif;
+  font-size: 2.9rem;
+  font-weight: 700;
+  color: #232323;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  margin: 0.3rem 0 0.6rem;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* --- META ROW INLINE --- */
+.hero.hero33 > div:last-child > div > p:nth-child(n+3) {
+  display: inline;
+  color: #888;
+  font-size: 1.01rem;
+  font-weight: 400;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.hero.hero33 > div:last-child > div > p:nth-child(4),
+.hero.hero33 > div:last-child > div > p:nth-child(6) {
+  margin: 0 0.45rem;
+  color: #bbb;
+}
+
+.hero.hero33 > div:last-child > div > p:nth-child(3),
+.hero.hero33 > div:last-child > div > p:nth-child(4),
+.hero.hero33 > div:last-child > div > p:nth-child(5),
+.hero.hero33 > div:last-child > div > p:nth-child(6),
+.hero.hero33 > div:last-child > div > p:nth-child(7) {
+  display: inline;
+}
+
+/* --- VERTICAL SPACING / TIGHTER GROUPING --- */
+.hero.hero33 > div:last-child > div > p,
+.hero.hero33 > div:last-child > div > h2 {
+  margin-bottom: 0.10rem;
+}
+
+/* --- REMOVE EXCESS MARGIN FROM LAST META ITEM --- */
+.hero.hero33 > div:last-child > div > p:nth-child(7) {
+  margin-right: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (width <= 900px) {
+  .hero.hero33 {
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 98vw;
+    margin: 32px auto;
+    padding: 0 2vw;
+    min-height: unset;
+  }
+
+  .hero.hero33 > div:first-child,
+  .hero.hero33 > div:last-child {
+    max-width: 100vw;
+    min-width: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero.hero33 > div:last-child {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero.hero33 > div:last-child > div {
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero.hero33 h2,
+  .hero.hero33 > div:last-child > div > p,
+  .hero.hero33 > div:last-child > div > p:nth-child(2) {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero.hero33 > div:first-child picture,
+  .hero.hero33 > div:first-child img {
+    max-width: 90vw;
+    min-width: 0;
+    aspect-ratio: 4/3;
+  }
+}
