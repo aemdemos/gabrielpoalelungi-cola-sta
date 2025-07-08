@@ -104,6 +104,93 @@
   font-family: var(--body-font-family);
 }
 
+/* .columns17 styles start (moved all columns17 rules together and deduplicated) */
+.columns.columns17 {
+  background: #fff;
+  padding: 80px 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.columns.columns17 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.columns.columns17 > div > .columns-img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.columns.columns17 .columns-img-col picture,
+.columns.columns17 .columns-img-col img {
+  display: block;
+  width: 180px;
+  height: 120px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: cover;
+  background: none;
+  margin: 0;
+  aspect-ratio: unset;
+}
+
+.columns.columns17 > div > .columns-img-col:nth-child(1) { transform: rotate(-6deg);}
+.columns.columns17 > div > .columns-img-col:nth-child(2) { transform: rotate(3deg);}
+.columns.columns17 > div > .columns-img-col:nth-child(3) { transform: rotate(-3deg);}
+.columns.columns17 > div > .columns-img-col:nth-child(4) { transform: rotate(5deg);}
+.columns.columns17 > div > .columns-img-col:nth-child(5) { transform: rotate(-4deg);}
+.columns.columns17 > div > .columns-img-col:nth-child(6) { transform: rotate(2deg);}
+
+@media (width <= 900px) {
+  .columns.columns17 {
+    padding: 32px 0;
+    min-height: 0;
+  }
+  .columns.columns17 > div {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .columns.columns17 .columns-img-col picture,
+  .columns.columns17 .columns-img-col img {
+    width: 100px;
+    height: 70px;
+  }
+}
+/* .columns17 styles end */
+
+.columns.columns11 a,
+.columns.columns11 a:any-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.columns.columns11 a:hover {
+  color: #d1d1d1;
+  text-decoration: underline;
+}
+
 .columns.columns11 > div {
   display: flex;
   flex-direction: row;
@@ -253,7 +340,7 @@
 }
 
 .columns.columns8 h1 {
-  font-family: Syncopate, Syncopate Fallback, sans-serif;
+  font-family: Syncopate, "Syncopate Fallback", sans-serif;
   font-size: clamp(48px, 5vw, 90px);
   font-weight: 400;
   color: #191919;
@@ -264,7 +351,7 @@
 }
 
 .columns.columns8 p:not(.button-container) {
-  font-family: Instrument Sans, Instrument Sans Fallback, sans-serif;
+  font-family: "Instrument Sans", "Instrument Sans Fallback", sans-serif;
   font-size: 1.05rem;
   color: #555;
   max-width: 365px;
@@ -309,17 +396,6 @@
   box-shadow: 0 4px 32px rgb(0 0 0 / 8%);
   object-fit: cover;
   margin: 0;
-}
-
-.columns.columns11 a,
-.columns.columns11 a:any-link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.columns.columns11 a:hover {
-  color: #d1d1d1;
-  text-decoration: underline;
 }
 
 .columns.columns11::after {
@@ -405,3 +481,4 @@
     gap: 10px;
   }
 }
+/* END: generated CSS */
