@@ -1,3 +1,4 @@
+
 /* --- Hero Container --- */
 .hero-container .hero-wrapper {
   max-width: unset;
@@ -962,5 +963,175 @@
     font-size: 0.98rem;
     padding-bottom: 0.31em;
     text-align: center;
+  }
+}
+
+/* --- START MERGED SELECTOR --- */
+.hero.hero25 {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  min-height: 640px;
+  max-width: unset;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* --- END MERGED SELECTOR --- */
+
+/* GENERATED CSS (unchanged except for the .hero.hero25 selector) */
+
+.hero.hero25 > div:first-child {
+  flex: 1 1 0;
+  order: 2;
+  position: relative;
+  height: 100vh;
+  min-height: 640px;
+  width: 50vw;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.hero.hero25 > div:first-child picture,
+.hero.hero25 > div:first-child img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #eee;
+  z-index: 1;
+}
+
+/* TEXT COLUMN (LEFT SIDE) */
+.hero.hero25 > div:last-child {
+  flex: 1 1 0;
+  order: 1;
+  background: #fff;
+  width: 50vw;
+  height: 100vh;
+  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 19vh 5vw 0 7vw;
+  box-sizing: border-box;
+}
+
+.hero.hero25 > div:last-child > div {
+  max-width: 480px;
+  width: 100%;
+}
+
+.hero.hero25 h2 {
+  font-family: "Montserrat Alternates", Montserrat, Syncopate, Arial, sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: #161616;
+  text-transform: uppercase;
+  margin: 0 0 1.4rem;
+  line-height: 1.07;
+  text-align: left;
+}
+
+.hero.hero25 p {
+  font-size: 1.07rem;
+  color: #353535;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0 0 2.1rem;
+  text-align: left;
+}
+
+.hero.hero25 .button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+}
+
+/* Button styling overrides */
+.hero-container > .hero-wrapper > .block.hero.hero25 .button {
+  background: #fff;
+  color: #161616;
+  border: 2px solid #161616;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 0.6em 2.2em;
+  margin: 0;
+  box-shadow: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  text-align: center;
+  outline: none;
+}
+
+.hero-container > .hero-wrapper > .block.hero.hero25 .button:hover,
+.hero-container > .hero-wrapper > .block.hero.hero25 .button:focus {
+  background: #161616;
+  color: #fff;
+  border-color: #161616;
+  text-decoration: none;
+}
+
+/* RESPONSIVE: stack on mobile */
+@media (width <= 900px) {
+  .hero.hero25 {
+    flex-direction: column;
+    height: auto;
+    min-height: unset;
+  }
+
+  .hero.hero25 > div {
+    width: 100vw;
+    min-height: 240px;
+  }
+
+  .hero.hero25 > div:first-child,
+  .hero.hero25 > div:last-child {
+    order: unset;
+    height: auto;
+    min-height: 220px;
+  }
+
+  .hero.hero25 > div:first-child picture,
+  .hero.hero25 > div:first-child img {
+    position: static;
+    height: 55vw;
+    min-height: 180px;
+    max-height: 300px;
+  }
+
+  .hero.hero25 > div:last-child {
+    padding: 2.5rem 5vw 2rem;
+    align-items: center;
+    background: #fff;
+    height: auto;
+    padding-top: 2rem;
+    justify-content: flex-start;
+  }
+
+  .hero.hero25 > div:last-child > div {
+    max-width: 95vw;
+  }
+
+  .hero.hero25 h2,
+  .hero.hero25 p,
+  .hero.hero25 .button-container {
+    text-align: center;
+    align-items: center;
   }
 }
