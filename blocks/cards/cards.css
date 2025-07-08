@@ -39,6 +39,104 @@
   box-sizing: border-box;
 }
 
+/* ------------------------------------------------------------------ */
+
+/* .cards.cards15 rules placed before .cards.cards5/.cards.cards4 for specificity */
+
+/* ------------------------------------------------------------------ */
+
+.cards.cards15 {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.cards.cards15 > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards.cards15 > ul > li {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgb(0 0 0 / 10%);
+  overflow: hidden;
+  padding: 0;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards.cards15 .cards-card-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
+.cards.cards15 .cards-card-image picture,
+.cards.cards15 .cards-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.cards.cards15 .cards-card-body {
+  padding: 24px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.cards.cards15 .cards-card-body p:first-child {
+  display: inline-block;
+  background: #ededed;
+  color: #232323;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: Montserrat, Arial, sans-serif;
+  letter-spacing: 0.06em;
+  border-radius: 16px;
+  padding: 4px 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-right: 12px;
+}
+
+.cards.cards15 .cards-card-body p:nth-child(2) {
+  display: inline-block;
+  color: #232323;
+  font-size: 12px;
+  font-family: Montserrat, Arial, sans-serif;
+  vertical-align: middle;
+}
+
+.cards.cards15 .cards-card-body h3 {
+  margin-top: 24px;
+  margin-bottom: 0;
+  color: #232323;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* End .cards.cards15 block                                           */
+
+/* ------------------------------------------------------------------ */
+
 /* Grid: tighter vertical row gap for more compact stack */
 .cards.cards5 > ul {
   display: flex;
