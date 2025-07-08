@@ -67,16 +67,6 @@
   align-items: stretch;
 }
 
-.hero.hero2 > div:last-child {
-  flex: 1 1 0;
-  min-width: 320px;
-  max-width: 650px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  display: flex;
-  height: 100%;
-}
-
 .hero.hero2 > div:first-child {
   flex: 0 1 430px;
   min-width: 340px;
@@ -88,6 +78,16 @@
   /* background: #ececec; */
 }
 
+.hero.hero2 > div:last-child {
+  flex: 1 1 0;
+  min-width: 320px;
+  max-width: 650px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+  height: 100%;
+}
+
 .hero.hero2 > div:first-child > div {
   width: 100%;
   display: flex;
@@ -95,6 +95,14 @@
   justify-content: flex-end;
   min-height: 460px;
   height: 100%;
+}
+
+.hero.hero2 > div:last-child > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .hero.hero2 > div:first-child picture {
@@ -116,14 +124,6 @@
   box-shadow: 0 4px 32px rgb(40 40 40 / 8%);
   background: #eee;
   height: auto;
-}
-
-.hero.hero2 > div:last-child > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
 }
 
 .hero.hero2 h1 {
@@ -263,16 +263,6 @@
 }
 
 /* --- Hero 3 --- */
-.hero.hero3 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 420px;
-  background: #fff;
-  padding: 0;
-}
-
 .hero.hero3 > div:first-child {
   flex: 0 0 7vw;
   min-width: 40px;
@@ -386,5 +376,177 @@
 
   .hero.hero3 .button-container {
     justify-content: flex-start;
+  }
+}
+
+/* --- START GENERATED CSS (EXCEPT .hero.hero6, SEE MERGED BELOW) --- */
+
+.hero.hero6 > div:first-child {
+  flex: 1 1 0;
+  order: 2;
+  min-width: 0;
+  min-height: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+}
+
+.hero.hero6 > div:first-child picture,
+.hero.hero6 > div:first-child img {
+  width: 100vw;
+  height: 100%;
+  min-height: 540px;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Overlay container: more balanced placement */
+.hero.hero6 > div:last-child {
+  flex: 0 0 auto;
+  order: 1;
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero.hero6 > div:last-child > div {
+  margin-top: 56px;
+  margin-left: 56px;
+  margin-right: auto;
+  background: rgb(24 24 24 / 74%);
+  border: 1.3px solid #fff;
+  border-radius: 18px;
+  backdrop-filter: blur(1px);
+  padding: 36px 36px 28px;
+  max-width: 380px;
+  min-width: 0;
+  color: #fff;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 9%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  pointer-events: auto;
+}
+
+/* Heading: better sizing and spacing */
+.hero.hero6 h1 {
+  color: #fff;
+  font-family: Syncopate, Orbitron, Arial, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0.019em;
+  line-height: 1.08;
+  margin: 0 0 18px;
+  text-align: left;
+  overflow-wrap: break-word;
+  width: 100%;
+}
+
+/* Subheading: slightly lighter and tighter */
+.hero.hero6 p {
+  color: rgb(255 255 255 / 79%);
+  font-size: 1.02rem;
+  line-height: 1.42;
+  margin: 0 0 14px;
+  max-width: 320px;
+  text-align: left;
+  width: 100%;
+}
+
+/* Button container: keep button spaced from text and overlay bottom */
+.hero.hero6 .button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+/* Button: comfortable size */
+.hero.hero6 .button-container .button {
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.62em 1.65em;
+  min-width: 0;
+  margin: 0;
+  box-shadow: none;
+  background: transparent;
+  border: 1.3px solid #fff;
+  color: #fff;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  outline: none;
+  width: auto;
+}
+
+.hero.hero6 .button-container .button:hover,
+.hero.hero6 .button-container .button:focus {
+  background: #fff;
+  color: #232323;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+@media (width <= 900px) {
+  .hero.hero6 {
+    flex-direction: column;
+    min-height: 420px;
+  }
+
+  .hero.hero6 > div:first-child,
+  .hero.hero6 > div:last-child {
+    width: 100vw;
+    min-width: 0;
+    position: static;
+  }
+
+  .hero.hero6 > div:last-child > div {
+    margin: 12px 2px;
+    padding: 18px 6px 12px;
+    max-width: 98vw;
+  }
+
+  .hero.hero6 h1 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+
+  .hero.hero6 p {
+    font-size: 0.73rem;
+    margin-bottom: 7px;
+  }
+}
+
+/* --- END GENERATED CSS (EXCEPT .hero.hero6, SEE MERGED BELOW) --- */
+
+/* --- MERGED .hero.hero6 SELECTOR BELOW --- */
+.hero.hero6 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100vw;
+  min-height: 540px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (width <= 900px) {
+  .hero.hero6 {
+    flex-direction: column;
+    min-height: 420px;
   }
 }
