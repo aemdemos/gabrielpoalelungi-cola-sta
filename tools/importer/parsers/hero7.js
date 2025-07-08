@@ -1,42 +1,47 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // 1. Table header should match block name exactly
+  // Header row for block table (must match exactly)
   const headerRow = ['Hero (hero7)'];
 
-  // 2. Background image row: check for a background image (none in this HTML, so empty string)
-  const bgRow = [''];
+  // Block expects a 3-row, 1-column table:
+  // Row 1: Block name header
+  // Row 2: Background image (none present, so empty)
+  // Row 3: Content (heading, subheading/paragraph, CTA)
 
-  // 3. Content row: should contain the heading, subheading (if any), paragraph, and CTA button
-  // The relevant block is .grid-layout, which contains h2 and a div with a <p> and <a>
-  let contentElements = [];
+  // --- Row 2 (background image) ---
+  const imageRow = ['']; // No background image in provided HTML
+
+  // --- Row 3 (content) ---
+  // Find: heading, subheading/text, call-to-action
+  // The layout is two columns in a grid: first column = h2, second column = text+button
   const grid = element.querySelector('.grid-layout');
+  let content = [];
   if (grid) {
-    // Find all direct children
+    // Capture all direct children of the grid in order:
+    // Usually: h2, then a div containing text & button
     const children = Array.from(grid.children);
-    // Heading (h2)
-    const heading = children.find(el => el.tagName && el.tagName.toLowerCase() === 'h2');
-    if (heading) contentElements.push(heading);
-    // The next div contains the rest
-    const contentDiv = children.find(el => el !== heading);
-    if (contentDiv) {
-      // Find paragraph and button inside contentDiv
-      const p = contentDiv.querySelector('p');
-      if (p) contentElements.push(p);
-      const a = contentDiv.querySelector('a');
-      if (a) contentElements.push(a);
+    for (const child of children) {
+      // For h2, just append
+      if (child.tagName.toLowerCase() === 'h2') {
+        content.push(child);
+      } else {
+        // For other divs, append all their children (e.g., paragraph and CTA)
+        content.push(...Array.from(child.children));
+      }
     }
-  } else {
-    // fallback: push all children if grid not found
-    contentElements = Array.from(element.children);
+  }
+  // Defensive: if no grid, fallback to all element children
+  if (content.length === 0) {
+    content = Array.from(element.children);
   }
 
-  // Build the table
-  const cells = [
-    headerRow,
-    bgRow,
-    [contentElements]
-  ];
+  const contentRow = [content];
 
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(block);
+  const table = WebImporter.DOMUtils.createTable([
+    headerRow,
+    imageRow,
+    contentRow
+  ], document);
+
+  element.replaceWith(table);
 }

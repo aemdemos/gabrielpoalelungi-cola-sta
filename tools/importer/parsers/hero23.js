@@ -1,42 +1,36 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the active tab (visible hero variant), or fallback to the first tab
-  const activeTab = element.querySelector('.w-tab-pane.w--tab-active') || element.querySelector('.w-tab-pane');
+  // Find the active tab (visible content)
+  const activeTab = element.querySelector('.w-tab-pane.w--tab-active');
   if (!activeTab) return;
 
-  // Find the grid containing all hero content
+  // Find the main content grid in the active tab
   const grid = activeTab.querySelector('.w-layout-grid');
   if (!grid) return;
 
-  // Extract the image (optional) and all non-image content
-  let imageEl = null;
-  const contentEls = [];
-  Array.from(grid.children).forEach(child => {
-    if (child.tagName.toLowerCase() === 'img') {
-      imageEl = child;
-    } else {
-      contentEls.push(child);
-    }
-  });
+  // Find the first image in the grid (background image for hero)
+  const img = grid.querySelector('img') || '';
 
-  // Compose the cell for the content row
-  // If there's more than one non-image element, put them all (e.g. heading, subheading, etc)
-  let contentCell;
-  if (contentEls.length === 0) {
-    contentCell = '';
-  } else if (contentEls.length === 1) {
-    contentCell = contentEls[0];
+  // Gather all content elements except images
+  // This will capture all headings, paragraphs, CTAs, etc., in order
+  const contentNodes = Array.from(grid.children).filter(child => child.tagName !== 'IMG');
+  let content;
+  if (contentNodes.length === 0) {
+    content = '';
+  } else if (contentNodes.length === 1) {
+    content = contentNodes[0];
   } else {
-    contentCell = contentEls;
+    content = contentNodes;
   }
 
-  // Build the table as in the markdown example
-  const rows = [
+  // Build table as specified: 1 column, 3 rows
+  const cells = [
     ['Hero (hero23)'],
-    [imageEl ? imageEl : ''],
-    [contentCell]
+    [img],
+    [content]
   ];
 
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  // Create and replace
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

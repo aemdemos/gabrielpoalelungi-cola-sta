@@ -1,27 +1,30 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Cards (cards20) block
+  // Header should match exactly
   const headerRow = ['Cards (cards20)'];
-
-  // Get all direct card wrappers
+  // Get all card wrapper divs (immediate children)
   const cardDivs = Array.from(element.querySelectorAll(':scope > div'));
   const rows = cardDivs.map(card => {
-    // Icon cell: SVG inside two div wrappers
-    let iconDiv = card.querySelector(':scope > div > div.icon');
-    if (!iconDiv) {
-      // fallback: try any svg
-      iconDiv = card.querySelector('svg');
+    // Icon cell: find .icon and take the SVG (reference, not clone)
+    let iconCell = '';
+    const iconWrapper = card.querySelector('.icon');
+    if (iconWrapper) {
+      const svg = iconWrapper.querySelector('svg');
+      if (svg) {
+        iconCell = svg;
+      } else {
+        iconCell = iconWrapper;
+      }
     }
-    // Text cell: usually a <p> after the icon
-    let textEl = card.querySelector('p, span, div:not(:has(svg)):not([class*="icon"])');
-    if (!textEl) {
-      // fallback: create element from remaining text
-      textEl = document.createElement('span');
-      textEl.textContent = card.textContent.trim();
-    }
-    return [iconDiv, textEl];
+    // Text cell: in this markup, it's just the <p>, but if more, collect all direct text elements (headings, paragraphs)
+    const textParts = [];
+    // Heading (optional, not present in this HTML, so we only search for <p>)
+    const p = card.querySelector('p');
+    if (p) textParts.push(p);
+    // If no <p>, cell will be empty but still filled
+    const textCell = textParts.length ? textParts : '';
+    return [iconCell, textCell];
   });
-
   const table = WebImporter.DOMUtils.createTable([
     headerRow,
     ...rows

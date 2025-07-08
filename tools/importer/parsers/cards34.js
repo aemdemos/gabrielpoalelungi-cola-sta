@@ -1,55 +1,43 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row as specified in the example
+  // Prepare table header
   const headerRow = ['Cards (cards34)'];
-
-  // Each card is a direct <a> child
+  const rows = [];
+  // Each card is a top-level <a>
   const cards = Array.from(element.querySelectorAll(':scope > a'));
-
-  const rows = cards.map(card => {
-    // Image: first img in the card
-    const image = card.querySelector('img');
-
-    // Card body content: the inner div with all text etc.
-    const cardBody = card.querySelector('.w-layout-grid > div');
-
-    // Compose the text cell by referencing the correct child elements
-    const textContent = [];
-
-    // Row of tags and read time (optional, as appears in design)
-    const tagRow = cardBody.querySelector('.flex-horizontal');
-    if (tagRow) textContent.push(tagRow);
-
-    // Title
-    const heading = cardBody.querySelector('h3, .h4-heading');
-    if (heading) textContent.push(heading);
-
-    // Description
-    const desc = cardBody.querySelector('p');
-    if (desc) textContent.push(desc);
-
-    // CTA (the last div containing 'Read', as a link)
-    // But only if it is actually present as shown in the HTML
-    const ctaDivs = cardBody.querySelectorAll('div');
-    if (ctaDivs.length > 0) {
-      const lastDiv = ctaDivs[ctaDivs.length - 1];
-      if (lastDiv && lastDiv.textContent && lastDiv.textContent.trim().toLowerCase() === 'read') {
-        const link = document.createElement('a');
-        link.href = card.getAttribute('href') || '#';
-        link.textContent = lastDiv.textContent.trim();
-        textContent.push(link);
+  cards.forEach(card => {
+    // Image: always the first <img> in the card
+    const img = card.querySelector('img');
+    // The content is all content inside the 'text' area of the card (after image)
+    // Find the parent grid/content div (second div inside 'a'),
+    // which contains everything except the image
+    let textCellContent;
+    const innerGrids = card.querySelectorAll(':scope > div');
+    if (innerGrids.length > 0) {
+      // For robustness, we'll use the div that is NOT the one containing the image (i.e., the second one)
+      let foundIndex = 0;
+      for (let i = 0; i < innerGrids.length; i++) {
+        if (innerGrids[i].querySelector('img')) continue;
+        foundIndex = i;
+        break;
       }
+      textCellContent = innerGrids[foundIndex];
+    } else {
+      // fallback, if content not structured as expected
+      // text is the rest of card minus the img
+      textCellContent = document.createElement('div');
+      Array.from(card.childNodes).forEach(n => {
+        if (n !== img) textCellContent.appendChild(n);
+      });
     }
-
-    // If nothing was found for textContent, maintain an empty cell
-    return [image, textContent.length ? textContent : ''];
+    rows.push([
+      img,
+      textCellContent
+    ]);
   });
-
-  // Build the table as a cards block
   const table = WebImporter.DOMUtils.createTable([
     headerRow,
     ...rows
   ], document);
-
   element.replaceWith(table);
 }

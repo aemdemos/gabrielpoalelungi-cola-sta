@@ -1,57 +1,38 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the grid layout containing the two main columns (content and image)
-  let grid = element.querySelector('.w-layout-grid');
-  if (!grid) grid = element.querySelector('div[class*="grid"]');
+  // Find the main two-column grid (with text and image)
+  const container = element.querySelector('.container');
+  if (!container) return;
+  const grid = container.querySelector('.grid-layout');
+  if (!grid) return;
+  const gridChildren = Array.from(grid.children);
 
-  let leftColContent = [];
-  let rightColContent = [];
+  // Identify image element (right column)
+  let imgEl = null;
+  let textCol = null;
+  gridChildren.forEach(child => {
+    if (!imgEl && (child.tagName === 'IMG' || (child.querySelector && child.querySelector('img')))) {
+      imgEl = child.tagName === 'IMG' ? child : child.querySelector('img');
+    } else if (!textCol) {
+      textCol = child;
+    }
+  });
 
-  if (grid) {
-    const children = Array.from(grid.children);
-    // Typically, columns are div first (with content), img second (visual)
-    const left = children.find(child => child.tagName === 'DIV');
-    const right = children.find(child => child.tagName === 'IMG');
-    if (left) {
-      leftColContent = Array.from(left.childNodes).filter(n => {
-        if (n.nodeType === Node.TEXT_NODE) return n.textContent.trim().length > 0;
-        if (n.nodeType === Node.ELEMENT_NODE) return true;
-        return false;
-      });
-    }
-    if (right) {
-      rightColContent = [right];
-    }
-  } else {
-    // Fallback: Just take all first-level divs and images
-    const left = element.querySelector('div');
-    if (left) {
-      leftColContent = Array.from(left.childNodes).filter(n => {
-        if (n.nodeType === Node.TEXT_NODE) return n.textContent.trim().length > 0;
-        if (n.nodeType === Node.ELEMENT_NODE) return true;
-        return false;
-      });
-    }
-    const right = element.querySelector('img');
-    if (right) {
-      rightColContent = [right];
-    }
-  }
+  // Defensive: if we only found one, use the first/second
+  if (!textCol && gridChildren.length > 0) textCol = gridChildren[0];
+  if (!imgEl && gridChildren.length > 1) imgEl = gridChildren[1];
 
-  // Mitigate edge case: if nothing found, use all non-nav and non-header direct children
-  if (leftColContent.length === 0) {
-    leftColContent = Array.from(element.childNodes).filter(n => {
-      if (n.nodeType === Node.TEXT_NODE) return n.textContent.trim().length > 0;
-      if (n.nodeType === Node.ELEMENT_NODE && !['NAV', 'HEADER'].includes(n.tagName)) return true;
-      return false;
-    });
-  }
+  // Reference the original textCol and imgEl elements directly in table cells
+  // so all text content and structure are included
 
-  // Build table structure: header row is block name, then one row with two columns
-  const cells = [
-    ['Columns (columns8)'],
-    [leftColContent, rightColContent]
-  ];
+  // Compose header and content rows
+  const headerRow = ['Columns (columns8)'];
+  const contentRow = [textCol, imgEl];
+
+  // Compose table
+  const cells = [headerRow, contentRow];
   const table = WebImporter.DOMUtils.createTable(cells, document);
+
+  // Replace the original element with the new table
   element.replaceWith(table);
 }

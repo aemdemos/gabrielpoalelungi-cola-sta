@@ -1,85 +1,86 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Table header row
+  // Helper to get immediate child nodes of the grid
+  function getDirectChildren(parent, selector) {
+    return Array.from(parent.children).filter(el => el.matches(selector));
+  }
+
   const headerRow = ['Cards (cards4)'];
   const rows = [];
 
-  // Find the grid of cards
+  // Locate grid container for cards
   const grid = element.querySelector('.grid-layout');
   if (!grid) return;
-  const gridChildren = Array.from(grid.children);
 
-  // --- Feature Card (first column, large card) ---
-  const featureCard = gridChildren[0];
-  if (featureCard) {
-    // Image
-    const imgDiv = featureCard.querySelector('.utility-aspect-1x1');
-    const img = imgDiv && imgDiv.querySelector('img');
-    // Tag (optional)
-    const tagGroup = featureCard.querySelector('.tag-group');
-    // Title (h2 or h3)
-    const title = featureCard.querySelector('h2,h3');
-    // Description
-    const desc = featureCard.querySelector('p');
-    const textCell = [];
-    if (tagGroup) textCell.push(tagGroup);
-    if (title) textCell.push(title);
-    if (desc) textCell.push(desc);
+  // 1. Large left card (main feature)
+  const cardLinks = getDirectChildren(grid, 'a.utility-link-content-block');
+  if (cardLinks.length > 0) {
+    const card = cardLinks[0];
+    // Image (first child div containing img)
+    const imgDiv = card.querySelector('div[class*="aspect"]');
+    const img = imgDiv ? imgDiv.querySelector('img') : null;
+    // Text content (tag group, heading, paragraph)
+    const textEls = [];
+    // Tag
+    const tagGroup = card.querySelector('.tag-group');
+    if (tagGroup) textEls.push(tagGroup);
+    // Heading
+    const heading = card.querySelector('h1, h2, h3, h4, h5, h6');
+    if (heading) textEls.push(heading);
+    // Paragraph
+    const para = card.querySelector('p');
+    if (para) textEls.push(para);
     rows.push([
       img || '',
-      textCell.length ? textCell : ''
+      textEls
     ]);
   }
 
-  // --- Two stacked image cards (second column) ---
-  const twoCardCol = gridChildren[1];
-  if (twoCardCol) {
-    const twoCards = Array.from(twoCardCol.querySelectorAll(':scope > a.utility-link-content-block'));
-    twoCards.forEach(card => {
-      // Image
-      const imgDiv = card.querySelector('.utility-aspect-3x2');
-      const img = imgDiv && imgDiv.querySelector('img');
-      // Tag (optional)
+  // 2. Right column: two smaller image cards (Sport, Beach)
+  // These are inside the first .flex-horizontal.flex-vertical.flex-gap-sm
+  const flexGroups = grid.querySelectorAll(':scope > .flex-horizontal.flex-vertical.flex-gap-sm');
+  if (flexGroups.length > 0) {
+    const imageCards = flexGroups[0].querySelectorAll(':scope > a.utility-link-content-block');
+    imageCards.forEach(card => {
+      const imgDiv = card.querySelector('div[class*="aspect"]');
+      const img = imgDiv ? imgDiv.querySelector('img') : null;
+      const textEls = [];
+      // Tag
       const tagGroup = card.querySelector('.tag-group');
-      // Title (h3)
-      const title = card.querySelector('h3');
-      // Description
-      const desc = card.querySelector('p');
-      const textCell = [];
-      if (tagGroup) textCell.push(tagGroup);
-      if (title) textCell.push(title);
-      if (desc) textCell.push(desc);
+      if (tagGroup) textEls.push(tagGroup);
+      // Heading
+      const heading = card.querySelector('h1, h2, h3, h4, h5, h6');
+      if (heading) textEls.push(heading);
+      // Paragraph
+      const para = card.querySelector('p');
+      if (para) textEls.push(para);
       rows.push([
         img || '',
-        textCell.length ? textCell : ''
+        textEls
       ]);
     });
   }
 
-  // --- Six text cards, no images (third column) ---
-  const textCardCol = gridChildren[2];
-  if (textCardCol) {
-    // Cards are direct children with class utility-link-content-block
-    const textCards = Array.from(textCardCol.querySelectorAll(':scope > a.utility-link-content-block'));
+  // 3. Right-most column: text-only cards (Party after dark, etc)
+  if (flexGroups.length > 1) {
+    const textCards = flexGroups[1].querySelectorAll(':scope > a.utility-link-content-block');
     textCards.forEach(card => {
-      const title = card.querySelector('h3');
-      const desc = card.querySelector('p');
-      const textCell = [];
-      if (title) textCell.push(title);
-      if (desc) textCell.push(desc);
+      const textEls = [];
+      // Heading
+      const heading = card.querySelector('h1, h2, h3, h4, h5, h6');
+      if (heading) textEls.push(heading);
+      // Paragraph
+      const para = card.querySelector('p');
+      if (para) textEls.push(para);
       rows.push([
-        '', // No image for these
-        textCell.length ? textCell : ''
+        '',
+        textEls
       ]);
     });
   }
 
-  // Build the table
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    ...rows
-  ], document);
-
-  // Replace original element with new table
+  // Compose table and replace original element
+  const cells = [headerRow, ...rows];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

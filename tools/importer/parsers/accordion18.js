@@ -1,44 +1,46 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Accordion block table header
+  // Get all accordion items (immediate children with class 'accordion')
+  const accordionItems = element.querySelectorAll(':scope > .accordion');
+  const rows = [];
+
+  // The header row: single cell, but we will set colspan=2 on the resulting <th>
   const headerRow = ['Accordion (accordion18)'];
+  rows.push(headerRow);
 
-  // Find all accordion items (direct children with class 'accordion')
-  const items = Array.from(element.querySelectorAll(':scope > .accordion'));
-
-  // Build rows: each row = [title, content]
-  const rows = items.map((item) => {
-    // Title: the .w-dropdown-toggle .paragraph-lg child
+  accordionItems.forEach((item) => {
+    // Get the title cell: inside .w-dropdown-toggle, .paragraph-lg
     let titleCell = '';
     const toggle = item.querySelector('.w-dropdown-toggle');
     if (toggle) {
       const titleDiv = toggle.querySelector('.paragraph-lg');
-      if (titleDiv) titleCell = titleDiv;
-    }
-    // Content: the .w-dropdown-list .rich-text child (or fallback to any content inside .w-dropdown-list)
-    let contentCell = '';
-    const dropdownList = item.querySelector('.w-dropdown-list');
-    if (dropdownList) {
-      const richText = dropdownList.querySelector('.rich-text');
-      if (richText) {
-        contentCell = richText;
-      } else {
-        // fallback: use the dropdownList's content div or itself
-        const contentDiv = dropdownList.querySelector('div');
-        if (contentDiv) {
-          contentCell = contentDiv;
-        } else {
-          contentCell = dropdownList;
-        }
+      if (titleDiv) {
+        titleCell = titleDiv;
       }
     }
-    return [titleCell, contentCell];
+    // Get the content cell: inside nav.accordion-content > .utility-padding-all-1rem > .rich-text
+    let contentCell = '';
+    const contentNav = item.querySelector('nav.accordion-content');
+    if (contentNav) {
+      const wrapper = contentNav.querySelector('.utility-padding-all-1rem');
+      if (wrapper) {
+        const rich = wrapper.querySelector('.rich-text');
+        contentCell = rich || wrapper;
+      } else {
+        contentCell = contentNav;
+      }
+    }
+    rows.push([titleCell, contentCell]);
   });
 
-  // Create and replace with accordion block table
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    ...rows
-  ], document);
+  // Create the table
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+
+  // Fix the header row's colspan to span both columns
+  // The first row is the header, first <tr>, first child <th>
+  const headerTh = table.querySelector('tr:first-child th');
+  if (headerTh) {
+    headerTh.setAttribute('colspan', '2');
+  }
   element.replaceWith(table);
 }

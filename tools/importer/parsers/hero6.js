@@ -1,50 +1,54 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row must match exactly
+  // Table header row must exactly match the example
   const headerRow = ['Hero (hero6)'];
-  
-  // 1st content cell: Background image (optional)
-  // Find the first immediate .w-layout-grid child div that contains an img
-  let bgImgEl = null;
-  const gridDivs = element.querySelectorAll(':scope > .w-layout-grid > div');
-  for (const div of gridDivs) {
-    const img = div.querySelector('img');
-    if (img) {
-      bgImgEl = img;
-      break;
-    }
-  }
 
-  // 2nd content cell: Heading, subheading, CTA(s)
-  // Find the card with main hero text and actions
-  let contentEls = [];
-  const card = element.querySelector('.card');
-  if (card) {
-    // Heading (h1)
-    const h1 = card.querySelector('h1');
-    if (h1) contentEls.push(h1);
-    // Subheading (p) - only include if not empty
-    const sub = card.querySelector('p');
-    if (sub && sub.textContent.trim()) contentEls.push(sub);
-    // Call-to-action buttons (any direct <a> children of .button-group)
-    const btnGroup = card.querySelector('.button-group');
-    if (btnGroup) {
-      const btns = btnGroup.querySelectorAll('a');
-      if (btns.length > 0) {
-        // Include the button group as-is for semantic grouping
-        contentEls.push(btnGroup);
+  // Find the grid layout direct children
+  const gridLayout = element.querySelector(':scope > .w-layout-grid');
+  const gridDivs = gridLayout ? gridLayout.querySelectorAll(':scope > div') : [];
+
+  // --- Row 2: Background image ---
+  let backgroundImg = '';
+  if (gridDivs.length > 0) {
+    const img = gridDivs[0].querySelector('img');
+    if (img) backgroundImg = img;
+  }
+  const bgImgRow = [backgroundImg];
+
+  // --- Row 3: Content (heading, subheading, CTA) ---
+  let contentCell = [];
+  if (gridDivs.length > 1) {
+    // The card contains all text/buttons
+    const card = gridDivs[1].querySelector('.card');
+    if (card) {
+      // Heading (use the first heading in card)
+      const heading = card.querySelector('h1, h2, h3, h4, h5, h6');
+      if (heading) contentCell.push(heading);
+      // Subheading (find subheading class, else first p that isn't in button group)
+      let subheading = card.querySelector('.subheading');
+      if (!subheading) {
+        // fallback: first p not in .button-group
+        const paragraphs = Array.from(card.querySelectorAll('p'));
+        subheading = paragraphs.find(p => !p.closest('.button-group'));
+      }
+      if (subheading) contentCell.push(subheading);
+      // CTAs (all <a> inside the button group)
+      const buttonGroup = card.querySelector('.button-group');
+      if (buttonGroup) {
+        const ctas = Array.from(buttonGroup.querySelectorAll('a'));
+        if (ctas.length > 0) contentCell.push(...ctas);
       }
     }
   }
+  const contentRow = [contentCell.length > 0 ? contentCell : ''];
 
-  // Ensure empty cell if nothing found for bg image/content
-  const rows = [
+  // Compose the block table
+  const cells = [
     headerRow,
-    [bgImgEl ? bgImgEl : ''],
-    [contentEls.length > 0 ? contentEls : '']
+    bgImgRow,
+    contentRow
   ];
 
-  // Create the table and replace the original element
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(block);
+  const table = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(table);
 }
