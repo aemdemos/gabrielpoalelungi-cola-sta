@@ -596,3 +596,162 @@
     height: 70px;
   }
 }
+
+/* ==== GENERATED CSS ==== */
+
+.columns.columns27 {
+  background: #f7f8f5;
+  padding: 64px 0 48px;
+  box-sizing: border-box;
+}
+
+/* Main row: tighter columns, align author group to quote */
+.columns.columns27 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 14px;
+  box-sizing: border-box;
+  padding: 0 40px;
+  min-height: 320px;
+  position: relative;
+}
+
+/* Left column */
+.columns.columns27 > div > div:first-child {
+  flex: 1 1 64%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: stretch;
+}
+
+/* Headline */
+.columns.columns27 > div > div:first-child > p:first-child {
+  font-family: Orbitron, Exo, Montserrat, var(--heading-font-family), Arial, sans-serif;
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: #222;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin: 0 0 28px;
+  text-transform: none;
+  overflow-wrap: break-word;
+}
+
+/* Quote: let it expand next to avatar, increase width */
+.columns.columns27 > div > div:first-child > p:nth-child(2) {
+  font-size: 1.07rem;
+  color: #222;
+  font-weight: 400;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Right column: avatar/name/role — align with quote, not headline */
+.columns.columns27 > div > div:last-child {
+  flex: 0 0 260px;
+  min-width: 180px;
+  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 82px;
+}
+
+.columns.columns27 > div > div:last-child > p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Avatar + name/role block */
+.columns.columns27 > div > div:last-child > p:first-child {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  justify-content: flex-start;
+}
+
+/* Avatar image */
+.columns.columns27 > div > div:last-child > p:first-child picture,
+.columns.columns27 > div > div:last-child > p:first-child img {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 14px;
+  display: inline-block;
+  background: #e8e8e5;
+  vertical-align: middle;
+}
+
+/* Name and role: grouped closely, left-aligned */
+.columns.columns27 > div > div:last-child > p:nth-child(2) {
+  font-size: 1.07rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.columns.columns27 > div > div:last-child > p:nth-child(3) {
+  font-size: 1rem;
+  color: #b2b2b2;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media (width <= 900px) {
+  .columns.columns27 > div {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+    min-height: unset;
+    align-items: flex-start;
+  }
+
+  .columns.columns27 > div > div:last-child {
+    max-width: 100%;
+    min-width: 0;
+    flex: 1 1 0;
+    align-items: flex-start;
+    margin-top: 32px;
+  }
+}
+
+@media (width <= 600px) {
+  .columns.columns27 > div > div:first-child > p:first-child {
+    font-size: 1.6rem;
+  }
+
+  .columns.columns27 > div {
+    gap: 12px;
+    padding: 0 8px;
+  }
+
+  .columns.columns27 {
+    padding: 28px 0 20px;
+  }
+
+  .columns.columns27 > div > div:last-child {
+    margin-top: 16px;
+  }
+
+  .columns.columns27 > div > div:last-child > p:first-child picture,
+  .columns.columns27 > div > div:last-child > p:first-child img {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    margin-right: 10px;
+  }
+}
