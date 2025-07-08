@@ -1,3 +1,9 @@
+/*
+  Fixes applied for no-descending-specificity and no-duplicate-selectors.
+  - Moved .carousel.carousel24 .carousel-slide above .carousel .carousel-slide:has() selectors
+  - Merged duplicate .carousel.carousel24 declarations
+*/
+
 .carousel .carousel-slides-container {
   position: relative;
 }
@@ -49,6 +55,21 @@
   justify-content: stretch;
   scroll-snap-align: start;
   box-shadow: none;
+}
+
+/* .carousel.carousel24 .carousel-slide specificity fix: move above :has() selectors and keep original spot */
+.carousel.carousel24 .carousel-slide {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 24px rgb(0 0 0 / 18%);
+  z-index: 5;
+  transform: rotate(-5.3deg);
+  overflow: visible;
+  min-width: 500px;
+  max-width: 95vw;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel .carousel-slide:has(.carousel-slide-content[data-align='center']) {
@@ -237,5 +258,183 @@
 
   .carousel.carousel12 .carousel-slide {
     aspect-ratio: 4/5;
+  }
+}
+
+.carousel.carousel24 {
+  background: #fff;
+  padding: 48px 0 56px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Decorative sketch lines - doodle effect */
+.carousel.carousel24::before,
+.carousel.carousel24::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border: none;
+  z-index: 1;
+}
+
+.carousel.carousel24::before {
+  width: 380px;
+  height: 60px;
+  top: 8px;
+  left: 8vw;
+  border-top: 2.5px solid #222;
+  border-right: 2.5px solid #222;
+  border-top-right-radius: 110px 40px;
+  transform: rotate(-7deg);
+  opacity: 0.83;
+}
+
+.carousel.carousel24::after {
+  width: 420px;
+  height: 56px;
+  right: 7vw;
+  bottom: 8px;
+  border-bottom: 2.5px solid #222;
+  border-left: 2.5px solid #222;
+  border-bottom-left-radius: 120px 36px;
+  transform: rotate(5deg);
+  opacity: 0.75;
+}
+
+/* Overlapping/Stacked card effect using pseudo-elements on slides-container */
+.carousel.carousel24 .carousel-slides-container {
+  position: relative;
+  z-index: 3;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Two stacked photos behind the main image */
+.carousel.carousel24 .carousel-slides-container::before,
+.carousel.carousel24 .carousel-slides-container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 92%;
+  height: 91%;
+  background: #fff;
+  border: 2.2px solid #292929;
+  border-radius: 18px;
+  z-index: 2;
+  box-shadow: 0 7px 32px rgb(0 0 0 / 11%);
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.carousel.carousel24 .carousel-slides-container::before {
+  transform: translate(-55%, -51%) rotate(-13deg) scale(0.96);
+  opacity: 0.80;
+}
+
+.carousel.carousel24 .carousel-slides-container::after {
+  transform: translate(-45%, -49%) rotate(8deg) scale(1.04);
+  opacity: 0.70;
+  border-color: #414141;
+}
+
+/* Main image/card styling */
+.carousel.carousel24 .carousel-slides {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  position: relative;
+  z-index: 4;
+  min-height: 400px;
+}
+
+/* Hand-drawn border simulation on main card */
+.carousel.carousel24 .carousel-slide::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: -7px;
+  border: 2.6px solid #232323;
+  border-radius: 20px;
+  z-index: 6;
+  opacity: 0.95;
+  box-sizing: border-box;
+}
+
+/* Ensure the image fills the card fully */
+.carousel.carousel24 .carousel-slide .carousel-slide-image,
+.carousel.carousel24 .carousel-slide .carousel-slide-image picture,
+.carousel.carousel24 .carousel-slide .carousel-slide-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 13px;
+  position: relative;
+  z-index: 7;
+}
+
+/* Polaroid label-style caption below the card, rotated */
+.carousel.carousel24 .carousel-slide-content {
+  position: absolute;
+  left: 50%;
+  bottom: -38px;
+  transform: translateX(-50%) rotate(-4deg);
+  margin: 0;
+  padding: 13px 36px 12px;
+  min-width: 340px;
+  background: rgb(253 253 253 / 98%);
+  border-radius: 15px;
+  box-shadow: 0 2px 14px 0 rgb(0 0 0 / 11%);
+  color: #262626;
+  text-align: center;
+  z-index: 10;
+  font-family: Syncopate, "Syncopate Fallback", sans-serif;
+  font-size: 2.15rem;
+  border-bottom: 2.2px solid #232323;
+  letter-spacing: 0.012em;
+  line-height: 1.22;
+}
+
+.carousel.carousel24 .carousel-slide-content h3 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.13;
+  color: inherit;
+  text-shadow: none;
+  letter-spacing: 0.005em;
+}
+
+/* Responsive adjustments */
+@media (width <= 900px) {
+  .carousel.carousel24 .carousel-slide {
+    min-width: 280px;
+    max-width: 97vw;
+  }
+
+  .carousel.carousel24 .carousel-slides-container::before,
+  .carousel.carousel24 .carousel-slides-container::after {
+    width: 96%;
+    height: 96%;
+  }
+
+  .carousel.carousel24 .carousel-slide-content {
+    min-width: 170px;
+    font-size: 1.09rem;
+    padding: 9px 13px 8px;
+    bottom: -20px;
+  }
+
+  .carousel.carousel24::before,
+  .carousel.carousel24::after {
+    width: 160px;
+    height: 24px;
   }
 }
