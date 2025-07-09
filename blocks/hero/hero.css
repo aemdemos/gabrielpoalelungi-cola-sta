@@ -1,3 +1,4 @@
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -43,5 +44,197 @@
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+  }
+}
+
+.hero.hero13 {
+  position: relative;
+  border-radius: 20px;
+  border: 1.5px solid #181818;
+  overflow: hidden;
+  min-height: 540px;
+  box-shadow: 0 6px 32px 0 rgb(0 0 0 / 10%);
+  background: none;
+  padding: 0;
+  display: block;
+}
+
+.hero.hero13 > div:first-child {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero.hero13 > div:first-child picture,
+.hero.hero13 > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Main row: image + text stack side by side */
+.hero.hero13 > div:nth-child(2) {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 540px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Overlay panel: flex row (image left, text stack right) */
+.hero.hero13 > div:nth-child(2) > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: rgb(0 0 0 / 35%);
+  border: 1.5px solid rgb(34 34 34 / 65%);
+  border-radius: 18px;
+  padding: 2.2rem 2.1rem;
+  margin: 3.0rem 0 0 3.0rem;
+  max-width: 510px;
+  min-width: 320px;
+  width: auto;
+  min-height: 340px;
+  box-shadow: 0 4px 32px 0 rgb(0 0 0 / 13%);
+  gap: 1.6rem;
+}
+
+/* Small image on the left */
+.hero.hero13 > div:nth-child(2) > div > p:first-child {
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.hero.hero13 > div:nth-child(2) > div > p:first-child picture,
+.hero.hero13 > div:nth-child(2) > div > p:first-child img {
+  width: 88px;
+  height: 88px;
+  border-radius: 13px;
+  object-fit: cover;
+  box-shadow: 0 2px 11px 0 rgb(0 0 0 / 8%);
+  display: block;
+}
+
+/* RIGHT: Text stack (headline, all subtexts, button - vertical column!) */
+.hero.hero13 > div:nth-child(2) > div > *:not(:first-child) {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 0;
+  min-width: 0;
+  max-width: 300px;
+  gap: 0.58rem;
+}
+
+/* Headline: blocky, allow natural wrapping */
+.hero.hero13 h2 {
+  margin: 0 0 1.0rem;
+  color: #fff;
+  font-size: 1.38rem;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 22%);
+  max-width: 200px;
+  text-align: left;
+  word-break: normal;
+  hyphens: auto;
+  white-space: normal;
+}
+
+/* Subtext: stacked under heading, left aligned, no columns */
+.hero.hero13 > div:nth-child(2) > div > *:not(:first-child) > p:not(.button-container) {
+  color: #fff;
+  font-size: 1.02rem;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  line-height: 1.38;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+  max-width: 250px;
+  white-space: normal;
+}
+
+/* Button: left-aligned below text stack */
+.hero.hero13 .button-container {
+  margin-top: 1.0rem;
+  text-align: left;
+  padding: 0;
+  width: auto;
+  align-self: flex-start;
+}
+
+.hero.hero13 .button-container .button {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid #fff;
+  border-radius: 30px;
+  padding: 0.44em 1.19em;
+  font-size: 1.02rem;
+  font-weight: 500;
+  margin: 0;
+  box-shadow: 0 1px 8px 0 rgb(0 0 0 / 4%);
+  transition: background 0.2s, color 0.2s;
+  min-width: 112px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.hero.hero13 .button-container .button:hover,
+.hero.hero13 .button-container .button:focus {
+  background: #fff;
+  color: #232323;
+}
+
+/* Responsive adjustments */
+@media (width <= 900px) {
+  .hero.hero13 {
+    border-radius: 12px;
+    min-height: 400px;
+  }
+
+  .hero.hero13 > div:nth-child(2) > div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.1rem;
+    padding: 1.2rem 0.7rem;
+    margin: 1rem auto 0;
+    max-width: 98vw;
+    min-width: unset;
+  }
+
+  .hero.hero13 > div:nth-child(2) > div > p:first-child picture,
+  .hero.hero13 > div:nth-child(2) > div > p:first-child img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+  }
+
+  .hero.hero13 > div:nth-child(2) > div > *:not(:first-child) {
+    margin-left: 0;
+    max-width: 90vw;
+  }
+
+  .hero.hero13 h2 {
+    font-size: 1rem;
+    max-width: 90vw;
+  }
+
+  .hero.hero13 > div:nth-child(2) > div > *:not(:first-child) > p:not(.button-container) {
+    font-size: 0.95rem;
+    max-width: 90vw;
   }
 }
