@@ -147,11 +147,11 @@
   ],
   "blocks": [
     {
-      "name": "Embed (video)",
+      "name": "Hero",
       "cluster": 1,
-      "source": "Embed",
-      "target": "Embed",
-      "key": "embedVideo1",
+      "source": "Hero",
+      "target": "Hero (hero1)",
+      "key": "hero1",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/blog/fashion-blog-post",
@@ -378,11 +378,11 @@
       ]
     },
     {
-      "name": "Hero",
+      "name": "Cards",
       "cluster": 10,
-      "source": "Hero",
-      "target": "Hero (hero10)",
-      "key": "hero10",
+      "source": "Cards",
+      "target": "Cards (cards10)",
+      "key": "cards10",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/fashion-trends-of-the-season",
@@ -468,11 +468,11 @@
       ]
     },
     {
-      "name": "Carousel",
+      "name": "Columns",
       "cluster": 12,
-      "source": "Carousel",
-      "target": "Carousel (carousel12)",
-      "key": "carousel12",
+      "source": "Columns",
+      "target": "Columns (columns12)",
+      "key": "columns12",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/fashion-trends-of-the-season",
@@ -561,11 +561,11 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Carousel",
       "cluster": 17,
-      "source": "Columns",
-      "target": "Columns (columns17)",
-      "key": "columns17",
+      "source": "Carousel",
+      "target": "Carousel (carousel17)",
+      "key": "carousel17",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/fashion-trends-young-adults-casual-sport",
@@ -591,11 +591,11 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Hero",
       "cluster": 19,
-      "source": "Columns",
-      "target": "Columns (columns19)",
-      "key": "columns19",
+      "source": "Hero",
+      "target": "Hero (hero19)",
+      "key": "hero19",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/faq",
@@ -606,11 +606,11 @@
       ]
     },
     {
-      "name": "Cards",
+      "name": "Cards (no images)",
       "cluster": 20,
       "source": "Cards",
-      "target": "Cards (cards20)",
-      "key": "cards20",
+      "target": "Cards",
+      "key": "cardsNoImages20",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/",
@@ -813,11 +813,11 @@
       ]
     },
     {
-      "name": "Hero",
+      "name": "Columns",
       "cluster": 33,
-      "source": "Hero",
-      "target": "Hero (hero33)",
-      "key": "hero33",
+      "source": "Columns",
+      "target": "Columns (columns33)",
+      "key": "columns33",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/blog/fashion-trends-young-style",
@@ -850,12 +850,6 @@
       "key": "cards35",
       "instances": [
         {
-          "url": "https://www.wknd-trendsetters.site/fashion-trends-of-the-season",
-          "urlHash": "1cfeb2756419a8f56a89a355f5557c3321845adb",
-          "uuid": "1cfeb275-06-eadf6a6abca85dfbd8029464354f763b41bb12a6",
-          "xpath": "/html[1]/body[1]/section[3]/div[1]/div[2]"
-        },
-        {
           "url": "https://www.wknd-trendsetters.site/fashion-insights",
           "urlHash": "67430c465ff7767e6ae98a0cffa44cd32754a351",
           "uuid": "67430c46-05-261c42ba0b32bcb3fb5c83c560b10c2435ad553d",
@@ -864,11 +858,26 @@
       ]
     },
     {
-      "name": "Hero",
+      "name": "Cards",
       "cluster": 36,
+      "source": "Cards",
+      "target": "Cards (cards36)",
+      "key": "cards36",
+      "instances": [
+        {
+          "url": "https://www.wknd-trendsetters.site/fashion-trends-of-the-season",
+          "urlHash": "1cfeb2756419a8f56a89a355f5557c3321845adb",
+          "uuid": "1cfeb275-06-eadf6a6abca85dfbd8029464354f763b41bb12a6",
+          "xpath": "/html[1]/body[1]/section[3]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 37,
       "source": "Hero",
-      "target": "Hero (hero36)",
-      "key": "hero36",
+      "target": "Hero (hero37)",
+      "key": "hero37",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/blog/fashion-trends-young-culture",
@@ -880,10 +889,10 @@
     },
     {
       "name": "Carousel",
-      "cluster": 37,
+      "cluster": 38,
       "source": "Carousel",
-      "target": "Carousel (carousel37)",
-      "key": "carousel37",
+      "target": "Carousel (carousel38)",
+      "key": "carousel38",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/blog/fashion-trends-young-style",
@@ -895,10 +904,10 @@
     },
     {
       "name": "Cards",
-      "cluster": 38,
+      "cluster": 39,
       "source": "Cards",
-      "target": "Cards (cards38)",
-      "key": "cards38",
+      "target": "Cards (cards39)",
+      "key": "cards39",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/blog/fashion-trends-young-style",
@@ -910,10 +919,10 @@
     },
     {
       "name": "Columns",
-      "cluster": 39,
+      "cluster": 40,
       "source": "Columns",
-      "target": "Columns (columns39)",
-      "key": "columns39",
+      "target": "Columns (columns40)",
+      "key": "columns40",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/blog/fashion-trends-young-style",
@@ -925,10 +934,10 @@
     },
     {
       "name": "Hero",
-      "cluster": 40,
+      "cluster": 41,
       "source": "Hero",
-      "target": "Hero (hero40)",
-      "key": "hero40",
+      "target": "Hero (hero41)",
+      "key": "hero41",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/fashion-trends-young-adults-casual-sport",
