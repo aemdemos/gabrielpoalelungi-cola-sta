@@ -1,3 +1,4 @@
+/* Accordion base styles */
 .accordion details {
   border: 1px solid #dadada;
 }
@@ -21,6 +22,121 @@
   transition: background-color 0.2s;
 }
 
+.accordion.accordion18 {
+  background: #f6f6f1;
+  padding: 0;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.accordion.accordion21 {
+  background: #fff;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Accordion items as rows with bottom border */
+.accordion.accordion18 details {
+  border: none;
+  border-bottom: 1px solid #e9e9e3;
+  margin: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.accordion.accordion21 details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  min-height: 38px;
+  width: 100%;
+  background: none;
+}
+
+.accordion.accordion21 .accordion-item-body {
+  flex: 1 1 0;
+  max-width: 52%;
+  min-width: 140px;
+  font-family: "Instrument Sans", "Instrument Sans Fallback", Arial, sans-serif;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.45;
+  margin-left: 8px;
+  padding: 0 16px 0 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  visibility: visible;
+}
+
+.accordion.accordion18 details:last-child {
+  border-bottom: none;
+}
+
+.accordion.accordion21 details:last-child {
+  border-bottom: none;
+}
+
+/* Summary row: flex for text/marker, centered, with good padding */
+.accordion.accordion18 summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  margin: 0;
+  background: transparent;
+  color: #232323;
+  font-size: 14px;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+.accordion.accordion21 summary,
+.accordion.accordion21 .accordion-item-label {
+  flex: 0 0 48%;
+  max-width: 48%;
+  min-width: 180px;
+  font-family: Syncopate, "Syncopate Fallback", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #232323;
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0 8px 0 16px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: default;
+  box-shadow: none;
+  min-height: 38px;
+  line-height: 1.2;
+  align-items: center;
+  display: flex;
+  list-style: none;
+  pointer-events: none;
+  user-select: text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .accordion details[open] summary {
   background-color: var(--light-color);
 }
@@ -30,7 +146,27 @@
   background-color: var(--light-color);
 }
 
+.accordion.accordion21 summary:focus,
+.accordion.accordion21 summary:hover,
+.accordion.accordion21 summary[open] {
+  background: none;
+  color: #232323;
+}
+
+/* Remove highlight or color change on open/hover/focus for .accordion18 variant */
+.accordion.accordion18 summary:focus,
+.accordion.accordion18 summary:hover,
+.accordion.accordion18 details[open] summary {
+  background: transparent;
+  color: #232323;
+}
+
 .accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion.accordion21 summary::-webkit-details-marker,
+.accordion.accordion21 summary::marker {
   display: none;
 }
 
@@ -55,7 +191,44 @@
   padding: 0 16px;
 }
 
+.accordion.accordion18 .accordion-item-body {
+  padding: 0 28px 20px;
+  margin: 0;
+  background: transparent;
+  border-top: none;
+  box-sizing: border-box;
+}
+
 .accordion details[open] .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
+}
+
+/* Ensure all paragraph text is styled */
+.accordion.accordion18 summary p,
+.accordion.accordion18 .accordion-item-body,
+.accordion.accordion18 .accordion-item-body p {
+  margin: 0;
+  padding: 0;
+  color: #232323;
+  font-size: 14px;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background: transparent;
+}
+
+.accordion.accordion21 .accordion-item-label p {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion.accordion21 .accordion-item-body p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default spacing between details */
+.accordion.accordion21 details + details {
+  margin-top: 0;
 }
