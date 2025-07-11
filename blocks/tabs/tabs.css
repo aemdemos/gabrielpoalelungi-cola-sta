@@ -39,7 +39,6 @@
   margin: 0;
 }
 
-
 .tabs .tabs-list button[aria-selected='true'] {
   border-bottom: 1px solid var(--background-color);
   background-color: var(--background-color);
@@ -55,4 +54,89 @@
 
 .tabs .tabs-panel[aria-hidden='true'] {
   display: none;
+}
+
+.tabs.tabs28 {
+  background: #000;
+  padding: 0;
+  border: none;
+}
+
+/* Tabs list - full width, black background, no underline here */
+.tabs.tabs28 .tabs-list {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  background: #000;
+  border: none;
+  border-bottom: none;
+  padding: 0;
+  width: 100%;
+  min-height: 33px;
+  align-items: stretch;
+}
+
+/* Tab buttons - equal width, left-aligned text, minimal horizontal padding */
+.tabs.tabs28 .tabs-list .tabs-tab {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0 0 0 12px;
+  color: #757575;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  height: 33px;
+  cursor: pointer;
+  text-align: left;
+  box-sizing: border-box;
+  transition: color 0.2s, font-weight 0.2s;
+  outline: none;
+  border-bottom: 2px solid transparent;
+}
+
+/* Remove extra button focus/hover styles from base sheet */
+.tabs.tabs28 .tabs-list .tabs-tab:focus,
+.tabs.tabs28 .tabs-list .tabs-tab:hover {
+  background: transparent;
+  outline: none;
+  color: #fff;
+}
+
+/* Tab label text - left-aligned, no forced width */
+.tabs.tabs28 .tabs-list .tabs-tab p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: inherit;
+  font-weight: inherit;
+  text-align: left;
+  line-height: 1;
+  width: auto;
+}
+
+/* Active/inactive states - underline only on the active tab */
+.tabs.tabs28 .tabs-list .tabs-tab[aria-selected="true"] {
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+.tabs.tabs28 .tabs-list .tabs-tab[aria-selected="false"] {
+  color: #757575;
+  font-weight: normal;
+  border-bottom: 2px solid transparent;
+}
+
+/* Hide panel borders and padding for minimal look */
+.tabs.tabs28 .tabs-panel {
+  border: none;
+  padding: 0;
+  background: transparent;
+  margin: 0;
 }

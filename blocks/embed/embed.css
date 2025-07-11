@@ -1,12 +1,24 @@
 .embed {
-  width: unset;
+  background-color: #f7f8f5;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 80px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   text-align: center;
-  max-width: 800px;
-  margin: 32px auto;
 }
 
 .embed > div {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
   justify-content: center;
 }
 
@@ -27,6 +39,11 @@
   justify-content: center;
   position: absolute;
   inset: 0;
+}
+
+.embed picture,
+.embed img {
+  display: none;
 }
 
 .embed .embed-placeholder picture img {
@@ -59,4 +76,17 @@
   border-left: 6px solid;
   top: 4px;
   left: 7px;
+}
+
+.embed p {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 0;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--body-font-family, Arial, sans-serif);
+  font-size: 18px;
+  color: #232323;
+  font-weight: 400;
 }
