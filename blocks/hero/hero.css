@@ -1,6 +1,19 @@
+/* --- Hero Container --- */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
+}
+
+.hero.hero10 {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero {
@@ -43,5 +56,746 @@
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+  }
+}
+
+/* ----- MERGED .hero.hero2 SELECTOR BELOW ----- */
+.hero.hero2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #f6f6f2;
+  padding: 4.5rem 4vw;
+  gap: 4.5rem;
+  min-height: 650px;
+  box-sizing: border-box;
+}
+/* ----- END MERGED .hero.hero2 SELECTOR ----- */
+
+.hero.hero2 > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 340px;
+  max-width: 390px;
+  width: 370px;
+  min-height: 370px;
+  background: #f6f6f2;
+  flex: 0 0 370px;
+  box-sizing: border-box;
+}
+
+.hero.hero2 > div:last-child {
+  flex: 1 1 0;
+  min-width: 320px;
+  max-width: 650px;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+}
+
+.hero.hero2 > div:first-child > div {
+  width: 100%;
+  min-height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero.hero2 picture,
+.hero.hero2 img {
+  width: 100%;
+  max-width: 370px;
+  min-width: 220px;
+  min-height: 370px;
+  aspect-ratio: 1/1;
+  border-radius: 24px;
+  object-fit: cover;
+  display: block;
+  background: #eee;
+  box-shadow: 0 4px 32px rgb(40 40 40 / 8%);
+}
+
+.hero.hero2 > div:last-child > div {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero.hero2 h1 {
+  font-family: Orbitron, Montserrat, Syncopate, Arial, sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.1rem);
+  font-weight: 400;
+  color: #161616;
+  line-height: 1.08;
+  letter-spacing: 0.04em;
+  margin: 0 0 1.7rem;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.hero.hero2 p:not(.button-container) {
+  color: #666;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  margin: 0 0 2.4rem;
+  text-align: left;
+  max-width: 420px;
+}
+
+.hero.hero2 .button-container {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.hero.hero2 .button-container .button {
+  background: #f6f6f2;
+  color: #161616;
+  border: 1.6px solid #161616;
+  border-radius: 999px;
+  font-size: 1.09rem;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 500;
+  padding: 0.8em 2.1em;
+  margin: 0;
+  box-shadow: none;
+  text-align: center;
+  outline: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.hero.hero2 .button-container .button:hover,
+.hero.hero2 .button-container .button:focus {
+  background: #181818;
+  color: #fff;
+  border-color: #181818;
+  text-decoration: none;
+}
+
+.hero.hero3 > div:first-child {
+  flex: 0 0 7vw;
+  min-width: 40px;
+  max-width: 110px;
+}
+
+.hero.hero3 > div:last-child {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 360px;
+  max-width: 720px;
+}
+
+.hero.hero3 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 680px;
+  margin-left: 40px;
+}
+
+.hero.hero3 .button {
+  background: #fff;
+  color: #181818;
+  border: 1px solid #181818;
+  border-radius: 9999px;
+  font-size: 1rem;
+  padding: 12px 0;
+  min-width: 220px;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  box-shadow: none;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  margin: 0;
+}
+
+.hero.hero3 .button:hover,
+.hero.hero3 .button:focus {
+  background: #181818;
+  color: #fff;
+  border-color: #181818;
+  text-decoration: none;
+}
+
+.hero.hero3 .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.hero.hero3 .button-container:not(:last-of-type) {
+  margin-bottom: 14px;
+}
+
+.hero.hero3 .button-container:first-of-type .button {
+  border-bottom: 2px solid #f6f58f;
+}
+
+.hero.hero6 > div:first-child picture,
+.hero.hero6 > div:first-child img {
+  width: 100vw;
+  height: 100%;
+  min-height: 540px;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero.hero6 p {
+  color: rgb(255 255 255 / 79%);
+  font-size: 1.02rem;
+  line-height: 1.42;
+  margin: 0 0 14px;
+  max-width: 320px;
+  text-align: left;
+  width: 100%;
+}
+
+.hero.hero6 .button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.hero.hero6 .button-container .button {
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.62em 1.65em;
+  min-width: 0;
+  margin: 0;
+  box-shadow: none;
+  background: transparent;
+  border: 1.3px solid #fff;
+  color: #fff;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  outline: none;
+  width: auto;
+}
+
+.hero.hero6 .button-container .button:hover,
+.hero.hero6 .button-container .button:focus {
+  background: #fff;
+  color: #232323;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+.hero.hero7 > div:first-child {
+  flex: 0 0 2vw;
+  min-width: 16px;
+  max-width: 36px;
+  display: block;
+}
+
+.hero.hero7 > div:last-child {
+  flex: 0 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.hero.hero7 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.3rem;
+  max-width: 540px;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hero.hero7 h2 {
+  font-family: "Montserrat Alternates", Montserrat, Syncopate, Arial, sans-serif;
+  font-size: 2.55rem;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.03;
+  margin: 0 0 0.6em;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.hero.hero7 p {
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.45;
+  margin: 0 0 0.45em;
+  text-align: left;
+  max-width: 100%;
+}
+
+.hero.hero7 .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hero.hero13 > div:first-child {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 360px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.hero.hero13 > div:first-child picture,
+.hero.hero13 > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 24px;
+}
+
+.hero.hero13 > div:last-child {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  background: rgb(24 24 24 / 33%);
+  border-radius: 18px;
+  border: 1.5px solid rgb(0 0 0 / 18%);
+  box-shadow: 0 2px 32px rgb(0 0 0 / 12%);
+  padding: 32px 36px;
+  max-width: 560px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  min-height: 220px;
+  width: auto;
+}
+
+.hero.hero13 .button,
+.hero.hero13 .button-container .button {
+  background: transparent;
+  color: #ececec;
+  border: 1.7px solid #ececec;
+  border-radius: 24px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 9px 28px;
+  margin: 0;
+  box-shadow: none;
+  text-align: center;
+  outline: none;
+  transition: background 0.1s, color 0.1s, border 0.1s;
+  min-width: 0;
+}
+
+.hero.hero13 .button:hover,
+.hero.hero13 .button:focus {
+  background: #ececec;
+  color: #222;
+  border-color: #ececec;
+  text-decoration: none;
+}
+
+.hero.hero10 > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0;
+  pointer-events: none;
+}
+
+.hero.hero10 > div:first-child picture,
+.hero.hero10 > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero.hero10 > div:first-child picture:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
+.hero.hero10 > div:first-child picture:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+.hero.hero10 > div:first-child picture:nth-child(3) { grid-area: 1 / 3 / 2 / 4; }
+.hero.hero10 > div:first-child picture:nth-child(4) { grid-area: 2 / 1 / 3 / 2; }
+.hero.hero10 > div:first-child picture:nth-child(5) { grid-area: 2 / 2 / 3 / 3; }
+.hero.hero10 > div:first-child picture:nth-child(6) { grid-area: 2 / 3 / 3 / 4; }
+.hero.hero10 > div:first-child picture:nth-child(7) { grid-area: 3 / 1 / 4 / 2; }
+.hero.hero10 > div:first-child picture:nth-child(8) { grid-area: 3 / 2 / 4 / 3; }
+.hero.hero10 > div:first-child picture:nth-child(9) { grid-area: 3 / 3 / 4 / 4; }
+
+.hero.hero10 > div:last-child {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero.hero10 > div:last-child > div {
+  background: rgb(0 0 0 / 55%);
+  border-radius: 1.8rem;
+  padding: 1.6rem 3.8rem 1.3rem;
+  max-width: 880px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+  box-sizing: border-box;
+  box-shadow: 0 2px 32px rgb(0 0 0 / 15%);
+}
+
+.hero.hero10 h1 {
+  font-family: Montserrat, Syncopate, Orbitron, Arial, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 0.047em;
+  line-height: 1.08;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 0.45rem;
+  overflow-wrap: break-word;
+  text-transform: none;
+  text-shadow: 0 1px 12px rgb(0 0 0 / 10%);
+}
+
+.hero.hero10 > div:last-child p:not(.button-container) {
+  font-size: 1.13rem;
+  color: rgb(255 255 255 / 85%);
+  margin: 0 0 0.5rem;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero.hero10 > div:last-child > div > .button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.hero.hero10 > div:last-child > div > .button-container + .button-container {
+  margin-left: 0;
+}
+
+.hero.hero10 > div:last-child > div > .button-container:not(:first-of-type) {
+  margin-top: 0;
+}
+
+.hero.hero10 > div:last-child > div > .button-container:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.hero-container > .hero-wrapper > .block.hero.hero7 .button {
+  background: transparent;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 400;
+  padding: 0.45em 1.4em;
+  margin: 0;
+  box-shadow: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  text-align: center;
+  outline: none;
+}
+
+.hero-container > .hero-wrapper > .block.hero.hero10 .button {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  font-size: 1.13rem;
+  padding: 0.7em 2.2em;
+  margin: 0;
+  box-shadow: none;
+  text-align: center;
+  font-weight: 600;
+  transition: background 0.16s, color 0.16s, border-color 0.16s;
+  line-height: 1.18;
+  min-width: 120px;
+}
+
+.hero-container > .hero-wrapper > .block.hero.hero7 .button:hover,
+.hero-container > .hero-wrapper > .block.hero.hero7 .button:focus {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+  text-decoration: none;
+}
+
+.hero-container > .hero-wrapper > .block.hero.hero10 .button:hover,
+.hero-container > .hero-wrapper > .block.hero.hero10 .button:focus {
+  background: rgb(255 255 255 / 18%);
+  color: #fff;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+@media (width <= 1100px) {
+  .hero.hero2 {
+    gap: 2.2rem;
+    padding: 2.8rem 4vw;
+    min-height: 350px;
+  }
+
+  .hero.hero2 > div:first-child {
+    min-width: 210px;
+    max-width: 260px;
+    flex-basis: 180px;
+  }
+
+  .hero.hero2 > div:last-child {
+    max-width: 100%;
+  }
+
+  .hero.hero2 > div:first-child > div {
+    min-height: 220px;
+  }
+
+  .hero.hero2 > div:first-child picture,
+  .hero.hero2 > div:first-child img {
+    max-width: 200px;
+    min-width: 130px;
+    min-height: 200px;
+  }
+
+  .hero.hero2 h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1.1rem;
+  }
+}
+
+@media (width <= 900px) {
+  .hero.hero6 {
+    flex-direction: column;
+    min-height: 420px;
+  }
+
+  .hero.hero6 > div:first-child,
+  .hero.hero6 > div:last-child {
+    width: 100vw;
+    min-width: 0;
+    position: static;
+  }
+
+  .hero.hero6 > div:last-child > div {
+    margin: 12px 2px;
+    padding: 18px 6px 12px;
+    max-width: 98vw;
+  }
+
+  .hero.hero6 h1 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+
+  .hero.hero6 p {
+    font-size: 0.73rem;
+    margin-bottom: 7px;
+  }
+}
+
+@media (width <= 900px) {
+  .hero.hero10,
+  .hero.hero10 > div:first-child,
+  .hero.hero10 > div:last-child {
+    min-height: 380px;
+    height: auto;
+  }
+
+  .hero.hero10 > div:last-child > div {
+    padding: 1.1rem 0.5rem 1rem;
+    max-width: 98vw;
+  }
+
+  .hero.hero10 h1 {
+    font-size: 1.32rem;
+    margin-bottom: 0.54rem;
+  }
+
+  .hero.hero10 > div:last-child p:not(.button-container) {
+    font-size: 0.99rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero.hero10 > div:last-child > div > .button-container {
+    gap: 0.65rem;
+  }
+}
+
+@media (width <= 900px) {
+  .hero.hero7 {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 18px 0.8rem;
+  }
+
+  .hero.hero7 > div:first-child {
+    display: none;
+  }
+
+  .hero.hero7 > div:last-child {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .hero.hero7 > div:last-child > div {
+    max-width: 100%;
+  }
+}
+
+@media (width <= 700px) {
+  .hero.hero2 {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 20px 3vw;
+    min-height: unset;
+  }
+
+  .hero.hero2 > div {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .hero.hero2 > div:first-child {
+    justify-content: center;
+    max-width: 98vw;
+    min-width: 0;
+    flex-basis: auto;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero.hero2 > div:last-child {
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+  }
+
+  .hero.hero2 > div:first-child > div {
+    min-height: unset;
+  }
+
+  .hero.hero2 > div:first-child img {
+    max-width: 90vw;
+    min-width: 0;
+    aspect-ratio: 1/1.15;
+  }
+
+  .hero.hero2 > div:last-child > div {
+    align-items: center;
+  }
+
+  .hero.hero2 h1,
+  .hero.hero2 p,
+  .hero.hero2 .button-container {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (width <= 900px) {
+  .hero.hero13 {
+    flex-direction: column;
+    border-radius: 16px;
+    min-height: 220px;
+  }
+
+  .hero.hero13 > div:first-child,
+  .hero.hero13 > div:first-child picture,
+  .hero.hero13 > div:first-child img {
+    border-radius: 16px;
+    min-height: unset;
+  }
+
+  .hero.hero13 > div:last-child {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    max-width: 96vw;
+    width: 100%;
+    padding: 18px 7px 14px;
+    border-radius: 13px;
+    margin: 0 auto;
+    min-height: unset;
+  }
+
+  .hero.hero13 > div:last-child > div {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero.hero13 > div:last-child > div > p:first-child picture,
+  .hero.hero13 > div:last-child > div > p:first-child img {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 10px;
+  }
+
+  .hero.hero13 > div:last-child > div > p:first-child + div {
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero.hero13 > div:last-child > div > p:first-child + div > h2 {
+    font-size: clamp(1.2rem, 6vw, 1.7rem);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .hero.hero13 > div:last-child > div > p:not(.button-container) {
+    font-size: 0.98rem;
+    padding-bottom: 0.31em;
+    text-align: center;
   }
 }
